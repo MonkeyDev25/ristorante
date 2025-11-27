@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante</title>
+    <link rel="stylesheet" href="stileristorante.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <!-- MENU-->
+    <header class="mb-5">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="ristorante.html">Cotto&Mangiato</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="about.html">Il Ristorante</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.facebook.com/cottoemangiatoviaorsi/">
+                                <i class="bi bi-facebook text-white p-4"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.instagram.com/cotto_e_mangiato_vomero">
+                                <i class="bi bi-instagram text-white"></i>                
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!--INTESTAZIONE MENU-->
+    <main class="mt-5">
+        <section class="container-fluid about d-flex align-items-center">
+            <div class="row">
+                <div class="col text-white">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+        </section>
+     
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Il nostro Menu</h2>
+                </div>
+            </div>
+
+            <!-- TABS MENU-->
+        <div class="row">
+            <div class="col">
+                <ul class="nav nav-pills p-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link text-bg-secondary" id="pills-primi-tab" data-bs-toggle="pill" data-bs-target="#pills-primi" type="button" role="tab" aria-controls="pills-primi" aria-selected="true">Primi Piatti</button>
+                    </li>
+                    <li class="nav-item px-3" role="presentation">
+                      <button class="nav-link text-bg-secondary" id="pills-secondi-tab" data-bs-toggle="pill" data-bs-target="#pills-secondi" type="button" role="tab" aria-controls="pills-secondi" aria-selected="false">Secondi Piatti</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link text-bg-secondary" id="pills-dessert-tab" data-bs-toggle="pill" data-bs-target="#pills-dessert" type="button" role="tab" aria-controls="pills-dessert" aria-selected="false">Dessert</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ELENCO PIATTI-->
+        
+        <div class="row mt-3">
+            <div class=" col tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-primi" role="tabpanel" aria-labelledby="pills-primi-tab" tabindex="0">
+                <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="col my-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="immagini/primo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Pasta dell'Osteria</h5>
+                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col my-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="immagini/primo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Pasta dell'Osteria</h5>
+                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>  
+                   <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col my-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="immagini/dishes-2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Pasta dell'Osteria</h5>
+                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col my-0">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-md-4">
+                            <img src="immagini/primo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title">Pasta dell'Osteria</h5>
+                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div> 
+                 </div>
+               
+                 <div class="tab-pane fade" id="pills-secondi" role="tabpanel" aria-labelledby="pills-secondi-tab" tabindex="0">
+                    <div class="row row-cols-1 row-cols-md-2 mt-3">
+                        <div class="col my-0">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/secondo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Brasato</h5>
+                                  <p class="card-text">Carne di primo taglio con scaglie di grano.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col my-0">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/secondo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col my-0">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/secondo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div> 
+                </div>
+               
+                <div class="tab-pane fade" id="pills-dessert" role="tabpanel" aria-labelledby="pills-dessert-tab" tabindex="0">
+                    <div class="row row-cols-1 row-cols-md-2 mt-3">
+                        <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/dessert2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+    
+                        <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Pasta dell'Osteria</h5>
+                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
+                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div> 
+                       
+                </div>
+            </div>
+
+          </div>
+        </div> 
+    </section> 
+    
+    <!-- HERO CONTENT-->
+     <div class="container-fluid hero-content">
+        <div class="row wrapper justify-content-center p-5">
+            <div class="col-12 col-md-6 p-5 semi-trasp text-white mx-10 text-center">
+                <h2>Specialità del giorno</h2>
+                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center mt-5 mb-sm-0">
+                  <img src="immagini/piatto-square.jpg" alt="" class="img-resized rounded-circle">
+                  <span class="ms-5 mt-3">
+                    <h4 class="text-start">Pollo alla Cacciatora</h4>
+                    <p class="mb-0">Con la nostra salsa al vino rosso</p>
+                  </span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container p-5 text-center">
+        <div class="row">
+            <div class="col">
+                <h2>Ti è venuta fame</h2>
+                <p>Prenota il tuo tavolo</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Prenota</button>
+            </div>
+        </div>
+    </div>
+
+    </main>        
+
+
+
+
+
+
+    <!--  FOOTER  -->
+  <footer class="text-bg-dark">
+    <div class="container py-4">
+        <div class="row row-col-2 row-col-md-3">
+            <div class="col">
+                <h3>Cotto & Mangiato</h3>
+                <h6>Cucina casalinga, porzioni da re!</h6>
+                <p> 
+                    Via Giuseppe Orsi, 121 - 80100 NAPOLI 
+                    <br>
+                    <a class=" mt-2 icon-link icon-link-hover text-white text-decoration-none" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                          </svg>
+                        081-7758182
+                      </a> 
+                    </p>
+                </div>
+                  <div class="col">
+                    <h3>Orari</h3>
+                    <p class="fw-bold mb-1">Lunedi <span class="fw-lighter">Chiuso</span></p>
+                    <p class="fw-bold">Martedi a Domenica <span class="fw-lighter">17:00 - 02:00</span></p>
+                    
+                  </div>
+                 <div class="col">
+                    <h3>Navigazione</h3>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="ristorante.html"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"> Ristorante</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html"> Menu</a>
+                        </li>
+                    </ul>
+
+                 </div>   
+        </div>
+    </div>
+  </footer>
+
+  <!--  MODALI  -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="form-floating mb-3">
+                <label for="floatingInput">La tua mail</label>
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nome e Cognome</span>
+                <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome" aria-describedby="basic-addon1">
+              </div>
+            <div class="row">
+                <div class="col">
+                    <label for="date"> Scegli il Tavolo</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Qualsiasi</option>
+                        <option value="1">Terrazza</option>
+                        <option value="2">Sala</option>
+                        <option value="3">Veranda</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label for="date">Seleziona una data</label>
+                    <input type="datetime-local" class="form-control" id="date">
+                </div>
+                
+                <div class="col">
+                    <label for="posti">N.Posti</label>
+                    <input type="number" class="form-control" id="posti">
+                </div>
+
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-text">Note</span>
+                <textarea class="form-control" placeholder="Hai qualche allergia alimentare o dieta particolare? scrivilo qui..." aria-label="With textarea"></textarea>
+            </div>
+        
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-primary">Invia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
