@@ -1,32 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-
+:root {
+    --sud-terracotta: #BC4A3C;
+    --sud-olive: #556B2F;
+    --sud-cream: #FFF9F0;
+    --sud-gold: #D4AF37;
+    --sud-dark: #2D241E;
+}
 
 body{
-    font-family: ' Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--sud-cream);
+    color: var(--sud-dark);
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family: 'oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.carousel-item {
-    height: 60vh;
+p, .lead {
+    font-family: 'Lora', serif;
 }
-.carousel-item > img{
 
+/* Swiper Customization */
+.swiper {
+    width: 100%;
+    height: 70vh;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
-.call-to-action{
-    background-color: lightgray;
+.swiper-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
+    max-width: 600px;
 }
 
-.img-resized {
-    max-width: 200px;
+.btn-primary {
+    background-color: var(--sud-terracotta);
+    border-color: var(--sud-terracotta);
+    padding: 12px 30px;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s;
 }
+
+.btn-primary:hover {
+    background-color: var(--sud-olive);
+    border-color: var(--sud-olive);
+    transform: translateY(-2px);
+}
+
+.call-to-action {
+    background-color: #E9E2D0;
+    border-top: 5px solid var(--sud-gold);
+}
+
+.img-resized { max-width: 150px; border: 3px solid var(--sud-gold); }
 
 .img-cover{
     object-fit: cover;
@@ -35,30 +81,37 @@ h1,h2,h3,h4,h5,h6{
 
 
 .footer{
-    font-size: 0.7rem;
+    background-color: var(--sud-dark) !important;
 }
-
-/* sTILI PAGINA ABOUT */
 
 .about{
     min-height: 50vh;
-    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), 
-    url(immagini/staff.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1920');
     background-repeat: no-repeat;
     background-position: center 15%;
     background-size: cover;
 }
 
 .staff{
-    background-color: lightgray;
+    background-color: #F2EBE1;
 }
 
-/* ITEM MENU */ 
+.menu-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.menu-card:hover { transform: scale(1.02); }
+
 .img-piatto{
     object-fit: cover;
 }
 
-/* HERO CONTENT */
+.nav-pills .nav-link.active {
+    background-color: var(--sud-terracotta);
+}
 
 .hero-content{
     min-height: 50vh;

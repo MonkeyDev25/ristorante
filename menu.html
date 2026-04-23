@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="stileristorante.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 <body>
     <!-- MENU-->
-    <header class="mb-5">
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: rgba(45, 36, 30, 0.9);">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Osteria del sud</a>
+                <a class="navbar-brand fw-bold" href="index.html" style="color: var(--sud-gold);">OSTERIA DEL SUD</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,11 +45,11 @@
     </header>
     
     <!--INTESTAZIONE MENU-->
-    <main class="mt-5">
-        <section class="container-fluid about d-flex align-items-center">
+    <main> 
+        <section class="container-fluid menu-hero d-flex align-items-center justify-content-center text-center">
             <div class="row">
-                <div class="col text-white">
-                    <h1>MENU</h1>
+                <div class="col text-white p-5">
+                    <h1 class="display-2 fw-bold">Il Nostro Menu</h1>
                 </div>
             </div>
         </section>
@@ -58,21 +59,22 @@
             <div class="row">
                 <div class="col">
                     <h2>Il nostro Menu</h2>
+                    <p class="lead text-muted">Scopri le nostre specialità, preparate con ingredienti freschi e passione.</p>
                 </div>
             </div>
 
             <!-- TABS MENU-->
         <div class="row">
             <div class="col">
-                <ul class="nav nav-pills  p-2" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills justify-content-center p-2 mb-5" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link text-bg-secondary" id="pills-primi-tab" data-bs-toggle="pill" data-bs-target="#pills-primi" type="button" role="tab" aria-controls="pills-primi" aria-selected="true">Primi Piatti</button>
+                      <button class="nav-link active" id="pills-primi-tab" data-bs-toggle="pill" data-bs-target="#pills-primi" type="button" role="tab" aria-controls="pills-primi" aria-selected="true">Primi Piatti</button>
                     </li>
                     <li class="nav-item px-2" role="presentation">
-                      <button class="nav-link text-bg-secondary" id="pills-secondi-tab" data-bs-toggle="pill" data-bs-target="#pills-secondi" type="button" role="tab" aria-controls="pills-secondi" aria-selected="false">Secondi Piatti</button>
+                      <button class="nav-link" id="pills-secondi-tab" data-bs-toggle="pill" data-bs-target="#pills-secondi" type="button" role="tab" aria-controls="pills-secondi" aria-selected="false">Secondi Piatti</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link text-bg-secondary" id="pills-dessert-tab" data-bs-toggle="pill" data-bs-target="#pills-dessert" type="button" role="tab" aria-controls="pills-dessert" aria-selected="false">Dessert</button>
+                      <button class="nav-link" id="pills-dessert-tab" data-bs-toggle="pill" data-bs-target="#pills-dessert" type="button" role="tab" aria-controls="pills-dessert" aria-selected="false">Dessert</button>
                     </li>
                 </ul>
             </div>
@@ -81,20 +83,20 @@
         <!-- ELENCO PIATTI-->
         
         <div class="row mt-3">
-            <div class=" col tab-content" id="pills-tabContent">
+            <div class="col tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-primi" role="tabpanel" aria-labelledby="pills-primi-tab" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-2 mt-3">
                     <div class="col my-0">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3 menu-card">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="immagini/primo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Orecchiette alle cime di rapa" loading="lazy">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Pasta dell'Osteria</h5>
-                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                              <h5 class="card-title">Orecchiette Pugliesi</h5>
+                              <p class="card-text">Pasta fresca fatta a mano con cime di rapa, acciughe e mollica croccante.</p>
+                              <p class="text-end fw-bold"><small class="text-muted">€12,50</small></p> 
                             </div>
                           </div>
                         </div>
@@ -102,34 +104,34 @@
                     </div>
 
                     <div class="col my-0">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3 menu-card">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="immagini/primo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Pasta alla Norma" loading="lazy">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Pasta dell'Osteria</h5>
-                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                              <h5 class="card-title">Pasta alla Norma</h5>
+                              <p class="card-text">Maccheroni con pomodoro San Marzano, melanzane fritte e ricotta salata.</p>
+                              <p class="text-end fw-bold"><small class="text-muted">€14,00</small></p> 
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                    </div>  
-                   <div class="row row-cols-1 row-cols-md-2">
+                   <div class="row row-cols-1 row-cols-md-2 mt-3">
                     <div class="col my-0">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3 menu-card">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="immagini/dishes-2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                            <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Paccheri allo scoglio" loading="lazy">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Pasta dell'Osteria</h5>
-                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                              <h5 class="card-title">Paccheri allo Scoglio</h5>
+                              <p class="card-text">Paccheri trafilati al bronzo con frutti di mare freschi del Mediterraneo.</p>
+                              <p class="text-end fw-bold"><small class="text-muted">€11,00</small></p> 
                             </div>
                           </div>
                         </div>
@@ -137,37 +139,37 @@
                     </div>
 
                     <div class="col my-0">
-                    <div class="card mb-3" style="max-width: 540px;">
+                    <div class="card mb-3 menu-card">
                         <div class="row g-0">
                           <div class="col-md-4">
-                            <img src="immagini/primo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Zuppa di fave" loading="lazy">
                           </div>
                           <div class="col-md-8">
                             <div class="card-body">
-                              <h5 class="card-title">Pasta dell'Osteria</h5>
-                              <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                              <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                              <h5 class="card-title">Fave e Cicoria</h5>
+                              <p class="card-text">Crema di fave bianche con cicoria campestre e olio extravergine d'oliva.</p>
+                              <p class="text-end fw-bold"><small class="text-muted">€9,50</small></p> 
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                    </div> 
-                 </div>
+                 </div> 
                
                  <div class="tab-pane fade" id="pills-secondi" role="tabpanel" aria-labelledby="pills-secondi-tab" tabindex="0">
                     <div class="row row-cols-1 row-cols-md-2 mt-3">
                         <div class="col my-0">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/secondo2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Polpette al sugo" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Brasato</h5>
-                                  <p class="card-text">Carne di primo taglio con scaglie di grano.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Polpette della Nonna</h5>
+                                  <p class="card-text">Morbide polpette di manzo al sugo, seguendo l'antica ricetta napoletana.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€18,00</small></p> 
                                 </div>
                               </div>
                             </div>
@@ -175,32 +177,32 @@
                         </div>
     
                         <div class="col my-0">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/secondo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Pesce Spada" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Pesce Spada alla Messinese</h5>
+                                  <p class="card-text">Trancio di pesce spada con capperi, olive nere e pomodorini pachino.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€16,50</small></p> 
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="col my-0">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/secondo1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Tagliata di manzo" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Tagliata alle Erbe</h5>
+                                  <p class="card-text">Controfiletto di manzo con erbe aromatiche del mediterraneo e sale maldon.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€17,00</small></p> 
                                 </div>
                               </div>
                             </div>
@@ -210,18 +212,18 @@
                 </div>
                
                 <div class="tab-pane fade" id="pills-dessert" role="tabpanel" aria-labelledby="pills-dessert-tab" tabindex="0">
-                    <div class="row row-cols-1 row-cols-md-2 mt-3">
+                    <div class="row row-cols-1 row-cols-md-2 mt-3"> 
                         <div class="col">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/dessert2.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Cannolo siciliano" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Cannolo Siciliano</h5>
+                                  <p class="card-text">Cialda croccante riempita al momento con ricotta fresca di pecora e pistacchio.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€6,00</small></p> 
                                 </div>
                               </div>
                             </div>
@@ -229,48 +231,48 @@
                         </div>
     
                         <div class="col">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Baba al rum" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Babà al Rum</h5>
+                                  <p class="card-text">Il classico della pasticceria napoletana, bagnato con rum invecchiato.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€5,50</small></p> 
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1532499016263-f2c3e98df9cd?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Tiramisù" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Tiramisù Tradizionale</h5>
+                                  <p class="card-text">Caffè forte, savoiardi artigianali e una crema al mascarpone leggerissima.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€7,00</small></p> 
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div class="col">
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3 menu-card">
                             <div class="row g-0">
                               <div class="col-md-4">
-                                <img src="immagini/dessert1.jpg" class="img-fluid rounded-start h-100 img-piatto" alt="...">
+                                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Cassata" loading="lazy">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">Pasta dell'Osteria</h5>
-                                  <p class="card-text">Maccheroni con ragù di cinghiale.</p>
-                                  <p class="text-end"><small class="text-muted">€9,50</small></p> 
+                                  <h5 class="card-title">Cassata Siciliana</h5>
+                                  <p class="card-text">Pan di spagna, pasta reale, canditi e un cuore di ricotta dolce.</p>
+                                  <p class="text-end fw-bold"><small class="text-muted">€6,50</small></p> 
                                 </div>
                               </div>
                             </div>
@@ -279,31 +281,114 @@
                        </div> 
                        
                 </div>
+                </div>
             </div>
 
           </div>
         </div> 
     </section> 
+
+    <!-- NUOVA SEZIONE: VINI DEL TERRITORIO -->
+    <section class="py-5" style="background-color: var(--sud-cream);">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col">
+                    <h2 class="display-5 fw-bold" style="color: var(--sud-terracotta);">Vini del Territorio</h2>
+                    <p class="lead text-muted">Una selezione curata dei migliori vitigni del Sud Italia per accompagnare i vostri piatti.</p>
+                </div>
+            </div>
+            <!-- Swiper Vini -->
+            <div class="swiper wineSwiper pb-5" style="height: auto;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide h-auto">
+                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Aglianico del Vulture" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold">Aglianico del Vulture</h5>
+                                <p class="card-text text-muted small">Basilicata - Rosso robusto e tannico, il "Barolo del Sud".</p>
+                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€24,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1553361371-9bb220265261?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Primitivo di Manduria" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold">Primitivo di Manduria</h5>
+                                <p class="card-text text-muted small">Puglia - Rosso avvolgente con note di frutti rossi maturi.</p>
+                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€22,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Nero d'Avola" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold">Nero d'Avola</h5>
+                                <p class="card-text text-muted small">Sicilia - Carattere deciso con sentori di spezie e liquirizia.</p>
+                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€20,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide h-auto">
+                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1566552881560-0be062e7e4e7?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Greco di Tufo" style="height: 250px; object-fit: cover;">
+                            <div class="card-body p-0">
+                                <h5 class="card-title fw-bold">Greco di Tufo</h5>
+                                <p class="card-text text-muted small">Campania - Bianco minerale, fresco e dal bouquet fiorito.</p>
+                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€18,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next" style="color: var(--sud-terracotta);"></div>
+                <div class="swiper-button-prev" style="color: var(--sud-terracotta);"></div>
+            </div>
+        </div>
+    </section>
     
     <!-- HERO CONTENT-->
-     <div class="container-fluid hero-content">
-        <div class="row wrapper justify-content-center p-5">
-            <div class="col-12 col-md-6 p-5 semi-trasp text-white mx-10 text-center">
-                <h2>Specialità del giorno</h2>
-                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center mt-5 mb-sm-0">
-                  <img src="immagini/piatto-square.jpg" alt="" class="img-resized rounded-circle">
-                  <span class="ms-3 mt-3">
-                    <h4 class="text-start">Pollo alla Cacciatora</h4>
-                    <p class="mb-0 text-start">Con la nostra salsa al vino rosso</p>
-                  </span>
+     <section class="container-fluid hero-content">
+        <div class="row wrapper justify-content-center py-5">
+            <div class="col-12 col-md-8 p-5 semi-trasp text-white text-center rounded-4">
+                <h2 class="display-5 fw-bold mb-5">Le Consigliate dello Chef</h2>
+        <div class="row wrapper justify-content-center py-5 m-0">
+            <div class="col-12 col-md-10 col-lg-8 p-5 semi-trasp text-white text-center rounded-4 shadow-lg">
+                <h2 class="display-5 fw-bold mb-5" style="color: var(--sud-gold);">Le Consigliate dello Chef</h2>
+                <div class="swiper specialtySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide d-flex flex-column align-items-center">
+                            <img src="https://images.unsplash.com/photo-1606416132922-22ab37c1231e?q=80&w=200&h=200&fit=crop" alt="Piatto speciale" class="img-resized rounded-circle mb-3 shadow">
+                            <h4 class="text-gold">Pollo alla Cacciatora</h4>
+                            <p>Cotto lentamente con vino rosso della casa e rosmarino selvatico.</p>
+                            <img src="https://images.unsplash.com/photo-1606416132922-22ab37c1231e?q=80&w=300&h=300&fit=crop" alt="Piatto speciale" class="rounded-circle mb-4 shadow border border-4" style="width: 200px; height: 200px; object-fit: cover; border-color: var(--sud-gold) !important;">
+                            <h4 style="color: var(--sud-gold);">Pollo alla Cacciatora</h4>
+                            <p class="lead mb-3">Cotto lentamente con vino rosso della casa, olive nere e rosmarino selvatico.</p>
+                            <span class="badge rounded-pill bg-light text-dark px-4 py-2 fs-6">€15,50</span>
+                        </div>
+                        <div class="swiper-slide d-flex flex-column align-items-center">
+                            <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=200&h=200&fit=crop" alt="Piatto speciale 2" class="img-resized rounded-circle mb-3 shadow">
+                            <h4 class="text-gold">Melanzane alla Parmigiana</h4>
+                            <p>Il segreto della nostra cucina: melanzane dorate e fritte in olio di alta qualità.</p>
+                            <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=300&h=300&fit=crop" alt="Piatto speciale 2" class="rounded-circle mb-4 shadow border border-4" style="width: 200px; height: 200px; object-fit: cover; border-color: var(--sud-gold) !important;">
+                            <h4 style="color: var(--sud-gold);">Melanzane alla Parmigiana</h4>
+                            <p class="lead mb-3">Il segreto della nostra cucina: melanzane dorate, fior di latte e basilico fresco.</p>
+                            <span class="badge rounded-pill bg-light text-dark px-4 py-2 fs-6">€12,00</span>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next" style="color: var(--sud-gold);"></div>
+                    <div class="swiper-button-prev" style="color: var(--sud-gold);"></div>
+                </div>
             </div>
         </div>
         </div>
-    </div>
-    <div class="container p-5 text-center">
+    </section>
+    <section class="container p-5 text-center">
         <div class="row">
             <div class="col">
-                <h2>Ti è venuta fame</h2>
+                <h2 class="display-6 fw-bold">Ti è venuta fame?</h2>
                 <p>Prenota il tuo tavolo</p>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Prenota</button>
             </div>
@@ -311,14 +396,14 @@
     </div>
 
     </main>        
-
+ 
 
 
 
 
 
     <!--  FOOTER  -->
-  <footer class="text-bg-dark">
+  <footer class="footer text-white py-5">
     <div class="container py-4">
         <div class="row row-col-2 row-col-md-3">
             <div class="col">
@@ -337,7 +422,7 @@
                 </div>
                   <div class="col">
                     <h3>Orari</h3>
-                    <p class="fw-bold mb-1">Lunedi <span class="fw-lighter">Chiuso</span></p>
+                    <p class="fw-bold mb-1">Lunedì <span class="fw-lighter">Chiuso</span></p>
                     <p class="fw-bold">Martedi a Domenica <span class="fw-lighter">17:00 - 02:00</span></p>
                     
                   </div>
@@ -345,7 +430,7 @@
                     <h3>Navigazione</h3>
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="ristorante.html"> Home</a>
+                            <a class="nav-link" href="index.html"> Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html"> Ristorante</a>
@@ -372,7 +457,7 @@
         <div class="modal-body">
           <form action="">
             <div class="form-floating mb-3">
-                <label for="floatingInput">La tua mail</label>
+                <label for="floatingInput">La tua email</label>
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               </div>
               <div class="input-group mb-3">
@@ -382,7 +467,7 @@
               </div>
             <div class="row">
                 <div class="col">
-                    <label for="date"> Scegli il Tavolo</label>
+                    <label for="table-select">Scegli il Tavolo</label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Qualsiasi</option>
                         <option value="1">Terrazza</option>
@@ -392,12 +477,12 @@
                 </div>
 
                 <div class="col">
-                    <label for="date">Seleziona una data</label>
+                    <label for="date">Data e Ora</label>
                     <input type="datetime-local" class="form-control" id="date">
                 </div>
                 
                 <div class="col">
-                    <label for="posti">N.Posti</label>
+                    <label for="posti">N. Persone</label>
                     <input type="number" class="form-control" id="posti">
                 </div>
 
@@ -419,6 +504,36 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const specialtySwiper = new Swiper('.specialtySwiper', {
+        loop: true,
+        autoplay: { delay: 4000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide'
+      });
+
+      const wineSwiper = new Swiper('.wineSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: { delay: 3500 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 }
+        }
+      });
+    </script>
 </body>
 </html>
