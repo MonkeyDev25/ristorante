@@ -1,539 +1,502 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ristorante</title>
-    <link rel="stylesheet" href="stileristorante.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Menù — Osteria del Sud</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-    <!-- MENU-->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: rgba(45, 36, 30, 0.9);">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="index.html" style="color: var(--sud-gold);">OSTERIA DEL SUD</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="about.html">Il Ristorante</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="menu.html">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.facebook.com/cottoemangiatoviaorsi/">
-                                <i class="bi bi-facebook text-white p-4"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://www.instagram.com/cotto_e_mangiato_vomero">
-                                <i class="bi bi-instagram text-white"></i>                
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!--INTESTAZIONE MENU-->
-    <main> 
-        <section class="container-fluid menu-hero d-flex align-items-center justify-content-center text-center">
-            <div class="row">
-                <div class="col text-white p-5">
-                    <h1 class="display-2 fw-bold">Il Nostro Menu</h1>
-                </div>
-            </div>
-        </section>
-     
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2>Il nostro Menu</h2>
-                    <p class="lead text-muted">Scopri le nostre specialità, preparate con ingredienti freschi e passione.</p>
-                </div>
-            </div>
 
-            <!-- TABS MENU-->
-        <div class="row">
-            <div class="col">
-                <ul class="nav nav-pills justify-content-center p-2 mb-5" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-primi-tab" data-bs-toggle="pill" data-bs-target="#pills-primi" type="button" role="tab" aria-controls="pills-primi" aria-selected="true">Primi Piatti</button>
-                    </li>
-                    <li class="nav-item px-2" role="presentation">
-                      <button class="nav-link" id="pills-secondi-tab" data-bs-toggle="pill" data-bs-target="#pills-secondi" type="button" role="tab" aria-controls="pills-secondi" aria-selected="false">Secondi Piatti</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-dessert-tab" data-bs-toggle="pill" data-bs-target="#pills-dessert" type="button" role="tab" aria-controls="pills-dessert" aria-selected="false">Dessert</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<!-- ── NAV ── -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Osteria del Sud</a>
+  <div class="nav-coords"></div>
+  <ul class="nav-links">
+    <li><a href="ristorante.html">Il Ristorante</a></li>
+    <li><a href="menu.html" style="color:var(--ivory)">Il Menù</a></li>
+    <li><button class="nav-cta" style="background:transparent; cursor:pointer;" onclick="document.getElementById('bookingModal').showModal()">Prenota</button></li>
+  </ul>
+</nav>
 
-        <!-- ELENCO PIATTI-->
-        
-        <div class="row mt-3">
-            <div class="col tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-primi" role="tabpanel" aria-labelledby="pills-primi-tab" tabindex="0">
-                <div class="row row-cols-1 row-cols-md-2 mt-3">
-                    <div class="col my-0">
-                    <div class="card mb-3 menu-card">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Orecchiette alle cime di rapa" loading="lazy">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Orecchiette Pugliesi</h5>
-                              <p class="card-text">Pasta fresca fatta a mano con cime di rapa, acciughe e mollica croccante.</p>
-                              <p class="text-end fw-bold"><small class="text-muted">€12,50</small></p> 
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-bg" id="pageHeroBg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>→</span>
+      <span>Il Menù</span>
+    </div>
+    <h1 class="page-title">
+      Quello che<br><em>c'è, oggi.</em>
+    </h1>
+    <span class="page-hero-note">Il menù cambia con la stagione. L'oste vi dirà cosa consigliare.</span>
+  </div>
+</section>
 
-                    <div class="col my-0">
-                    <div class="card mb-3 menu-card">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Pasta alla Norma" loading="lazy">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Pasta alla Norma</h5>
-                              <p class="card-text">Maccheroni con pomodoro San Marzano, melanzane fritte e ricotta salata.</p>
-                              <p class="text-end fw-bold"><small class="text-muted">€14,00</small></p> 
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                   </div>  
-                   <div class="row row-cols-1 row-cols-md-2 mt-3">
-                    <div class="col my-0">
-                    <div class="card mb-3 menu-card">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Paccheri allo scoglio" loading="lazy">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Paccheri allo Scoglio</h5>
-                              <p class="card-text">Paccheri trafilati al bronzo con frutti di mare freschi del Mediterraneo.</p>
-                              <p class="text-end fw-bold"><small class="text-muted">€11,00</small></p> 
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+<div class="glow-line"></div>
 
-                    <div class="col my-0">
-                    <div class="card mb-3 menu-card">
-                        <div class="row g-0">
-                          <div class="col-md-4">
-                            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Zuppa di fave" loading="lazy">
-                          </div>
-                          <div class="col-md-8">
-                            <div class="card-body">
-                              <h5 class="card-title">Fave e Cicoria</h5>
-                              <p class="card-text">Crema di fave bianche con cicoria campestre e olio extravergine d'oliva.</p>
-                              <p class="text-end fw-bold"><small class="text-muted">€9,50</small></p> 
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                   </div> 
-                 </div> 
-               
-                 <div class="tab-pane fade" id="pills-secondi" role="tabpanel" aria-labelledby="pills-secondi-tab" tabindex="0">
-                    <div class="row row-cols-1 row-cols-md-2 mt-3">
-                        <div class="col my-0">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Polpette al sugo" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Polpette della Nonna</h5>
-                                  <p class="card-text">Morbide polpette di manzo al sugo, seguendo l'antica ricetta napoletana.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€18,00</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-    
-                        <div class="col my-0">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Pesce Spada" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Pesce Spada alla Messinese</h5>
-                                  <p class="card-text">Trancio di pesce spada con capperi, olive nere e pomodorini pachino.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€16,50</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col my-0">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Tagliata di manzo" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Tagliata alle Erbe</h5>
-                                  <p class="card-text">Controfiletto di manzo con erbe aromatiche del mediterraneo e sale maldon.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€17,00</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                       </div> 
-                </div>
-               
-                <div class="tab-pane fade" id="pills-dessert" role="tabpanel" aria-labelledby="pills-dessert-tab" tabindex="0">
-                    <div class="row row-cols-1 row-cols-md-2 mt-3"> 
-                        <div class="col">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Cannolo siciliano" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Cannolo Siciliano</h5>
-                                  <p class="card-text">Cialda croccante riempita al momento con ricotta fresca di pecora e pistacchio.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€6,00</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-    
-                        <div class="col">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Baba al rum" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Babà al Rum</h5>
-                                  <p class="card-text">Il classico della pasticceria napoletana, bagnato con rum invecchiato.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€5,50</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1532499016263-f2c3e98df9cd?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Tiramisù" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Tiramisù Tradizionale</h5>
-                                  <p class="card-text">Caffè forte, savoiardi artigianali e una crema al mascarpone leggerissima.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€7,00</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                        <div class="card mb-3 menu-card">
-                            <div class="row g-0">
-                              <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=400&h=300&fit=crop" class="img-fluid rounded-start h-100 img-piatto" alt="Cassata" loading="lazy">
-                              </div>
-                              <div class="col-md-8">
-                                <div class="card-body">
-                                  <h5 class="card-title">Cassata Siciliana</h5>
-                                  <p class="card-text">Pan di spagna, pasta reale, canditi e un cuore di ricotta dolce.</p>
-                                  <p class="text-end fw-bold"><small class="text-muted">€6,50</small></p> 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                       </div> 
-                       
-                </div>
-                </div>
-            </div>
+<!-- ── MENU FULL ── -->
+<section class="menu-full">
+  <div class="menu-full-inner">
 
+    <!-- FILTRO CATEGORIE -->
+    <div class="cat-filter">
+      <button class="cat-btn active" data-cat="primi">Primi <span class="cat-btn-count">04</span></button>
+      <button class="cat-btn" data-cat="secondi">Secondi <span class="cat-btn-count">04</span></button>
+      <button class="cat-btn" data-cat="dolci">Dolci <span class="cat-btn-count">04</span></button>
+      <button class="cat-btn" data-cat="vini">Vini <span class="cat-btn-count">04</span></button>
+    </div>
+
+    <!-- ═══ PRIMI ═══ -->
+    <div class="cat-section active" id="cat-primi">
+      <div class="cat-section-head reveal">
+        <h2 class="cat-section-title"><em>Primi Piatti</em></h2>
+        <p class="cat-section-note">La pasta è fatta a mano ogni mattina. Il ragù cuoce da otto ore.</p>
+      </div>
+
+      <!-- Desktop list -->
+      <div class="piatti-list">
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap">
+            <picture>
+              <img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Spaghetti alle Vongole" loading="lazy">
+            </picture>
           </div>
-        </div> 
-    </section> 
+          <div class="piatto-info">
+            <div class="piatto-name">Spaghetti alle Vongole</div>
+            <div class="piatto-desc">Veraci di Pozzuoli, prezzemolo, aglio, vino bianco — mantecati a fuoco vivo</div>
+            <div class="piatto-allergens">Molluschi · Glutine</div>
+          </div>
+          <div class="piatto-price-wrap">
+            <span class="piatto-price">€ 18</span>
+          </div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap">
+            <picture>
+              <img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Paccheri al Ragù" loading="lazy">
+            </picture>
+          </div>
+          <div class="piatto-info">
+            <div class="piatto-name">Paccheri al Ragù</div>
+            <div class="piatto-desc">Ragù napoletano cotto otto ore, ricotta salata stagionata di Lucania</div>
+            <div class="piatto-allergens">Glutine · Latte</div>
+          </div>
+          <div class="piatto-price-wrap">
+            <span class="piatto-price">€ 16</span>
+          </div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap">
+            <picture>
+              <img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Scialatielli ai Frutti di Mare" loading="lazy">
+            </picture>
+          </div>
+          <div class="piatto-info">
+            <div class="piatto-name">Scialatielli ai Frutti di Mare</div>
+            <div class="piatto-desc">Pasta fresca, cozze, gamberi, totani, pomodorino del Piennolo del Vesuvio</div>
+            <div class="piatto-allergens">Crostacei · Molluschi · Glutine · Uova</div>
+          </div>
+          <div class="piatto-price-wrap">
+            <span class="piatto-price">€ 22</span>
+          </div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap">
+            <picture>
+              <img decoding="async" src="asset/immagini/fave-e-cicoria-piatto800x800.webp" alt="Minestra di Fagioli e Scarola" loading="lazy">
+            </picture>
+          </div>
+          <div class="piatto-info">
+            <div class="piatto-name">Minestra di Fagioli e Scarola</div>
+            <div class="piatto-desc">Fagioli di Controne, scarola riccia, olio nuovo, pane cafone tostato</div>
+            <div class="piatto-allergens">Glutine</div>
+          </div>
+          <div class="piatto-price-wrap">
+            <span class="piatto-price">€ 12</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- NUOVA SEZIONE: VINI DEL TERRITORIO -->
-    <section class="py-5" style="background-color: var(--sud-cream);">
-        <div class="container">
-            <div class="row mb-5 text-center">
-                <div class="col">
-                    <h2 class="display-5 fw-bold" style="color: var(--sud-terracotta);">Vini del Territorio</h2>
-                    <p class="lead text-muted">Una selezione curata dei migliori vitigni del Sud Italia per accompagnare i vostri piatti.</p>
+      <!-- Mobile Swiper -->
+      <div class="piatti-swiper-wrap">
+        <div class="swiper piatti-swiper" id="swiper-primi">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="piatto-card">
+                <div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Spaghetti alle Vongole" loading="lazy"></picture></div>
+                <div class="piatto-card-body">
+                  <div class="piatto-card-name">Spaghetti alle Vongole</div>
+                  <div class="piatto-card-desc">Veraci di Pozzuoli, prezzemolo, aglio, vino bianco</div>
+                  <div class="piatto-card-price">€ 18</div>
                 </div>
-            </div>
-            <!-- Swiper Vini -->
-            <div class="swiper wineSwiper pb-5" style="height: auto;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide h-auto">
-                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Aglianico del Vulture" style="height: 250px; object-fit: cover;">
-                            <div class="card-body p-0">
-                                <h5 class="card-title fw-bold">Aglianico del Vulture</h5>
-                                <p class="card-text text-muted small">Basilicata - Rosso robusto e tannico, il "Barolo del Sud".</p>
-                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€24,00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1553361371-9bb220265261?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Primitivo di Manduria" style="height: 250px; object-fit: cover;">
-                            <div class="card-body p-0">
-                                <h5 class="card-title fw-bold">Primitivo di Manduria</h5>
-                                <p class="card-text text-muted small">Puglia - Rosso avvolgente con note di frutti rossi maturi.</p>
-                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€22,00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1584916201218-f4242ceb4809?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Nero d'Avola" style="height: 250px; object-fit: cover;">
-                            <div class="card-body p-0">
-                                <h5 class="card-title fw-bold">Nero d'Avola</h5>
-                                <p class="card-text text-muted small">Sicilia - Carattere deciso con sentori di spezie e liquirizia.</p>
-                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€20,00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide h-auto">
-                        <div class="card menu-card h-100 text-center p-3 shadow-sm">
-                            <img src="https://images.unsplash.com/photo-1566552881560-0be062e7e4e7?q=80&w=400&h=600&fit=crop" class="card-img-top rounded-3 mb-3" alt="Greco di Tufo" style="height: 250px; object-fit: cover;">
-                            <div class="card-body p-0">
-                                <h5 class="card-title fw-bold">Greco di Tufo</h5>
-                                <p class="card-text text-muted small">Campania - Bianco minerale, fresco e dal bouquet fiorito.</p>
-                                <p class="fw-bold fs-5" style="color: var(--sud-terracotta);">€18,00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next" style="color: var(--sud-terracotta);"></div>
-                <div class="swiper-button-prev" style="color: var(--sud-terracotta);"></div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- HERO CONTENT-->
-     <section class="container-fluid hero-content">
-        <div class="row wrapper justify-content-center py-5">
-            <div class="col-12 col-md-8 p-5 semi-trasp text-white text-center rounded-4">
-                <h2 class="display-5 fw-bold mb-5">Le Consigliate dello Chef</h2>
-        <div class="row wrapper justify-content-center py-5 m-0">
-            <div class="col-12 col-md-10 col-lg-8 p-5 semi-trasp text-white text-center rounded-4 shadow-lg">
-                <h2 class="display-5 fw-bold mb-5" style="color: var(--sud-gold);">Le Consigliate dello Chef</h2>
-                <div class="swiper specialtySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide d-flex flex-column align-items-center">
-                            <img src="https://images.unsplash.com/photo-1606416132922-22ab37c1231e?q=80&w=200&h=200&fit=crop" alt="Piatto speciale" class="img-resized rounded-circle mb-3 shadow">
-                            <h4 class="text-gold">Pollo alla Cacciatora</h4>
-                            <p>Cotto lentamente con vino rosso della casa e rosmarino selvatico.</p>
-                            <img src="https://images.unsplash.com/photo-1606416132922-22ab37c1231e?q=80&w=300&h=300&fit=crop" alt="Piatto speciale" class="rounded-circle mb-4 shadow border border-4" style="width: 200px; height: 200px; object-fit: cover; border-color: var(--sud-gold) !important;">
-                            <h4 style="color: var(--sud-gold);">Pollo alla Cacciatora</h4>
-                            <p class="lead mb-3">Cotto lentamente con vino rosso della casa, olive nere e rosmarino selvatico.</p>
-                            <span class="badge rounded-pill bg-light text-dark px-4 py-2 fs-6">€15,50</span>
-                        </div>
-                        <div class="swiper-slide d-flex flex-column align-items-center">
-                            <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=200&h=200&fit=crop" alt="Piatto speciale 2" class="img-resized rounded-circle mb-3 shadow">
-                            <h4 class="text-gold">Melanzane alla Parmigiana</h4>
-                            <p>Il segreto della nostra cucina: melanzane dorate e fritte in olio di alta qualità.</p>
-                            <img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?q=80&w=300&h=300&fit=crop" alt="Piatto speciale 2" class="rounded-circle mb-4 shadow border border-4" style="width: 200px; height: 200px; object-fit: cover; border-color: var(--sud-gold) !important;">
-                            <h4 style="color: var(--sud-gold);">Melanzane alla Parmigiana</h4>
-                            <p class="lead mb-3">Il segreto della nostra cucina: melanzane dorate, fior di latte e basilico fresco.</p>
-                            <span class="badge rounded-pill bg-light text-dark px-4 py-2 fs-6">€12,00</span>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next" style="color: var(--sud-gold);"></div>
-                    <div class="swiper-button-prev" style="color: var(--sud-gold);"></div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section class="container p-5 text-center">
-        <div class="row">
-            <div class="col">
-                <h2 class="display-6 fw-bold">Ti è venuta fame?</h2>
-                <p>Prenota il tuo tavolo</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Prenota</button>
-            </div>
-        </div>
-    </div>
-
-    </main>        
- 
-
-
-
-
-
-    <!--  FOOTER  -->
-  <footer class="footer text-white py-5">
-    <div class="container py-4">
-        <div class="row row-col-2 row-col-md-3">
-            <div class="col">
-                <h3>Osteria del sud</h3>
-                <h6>Cucina casalinga, porzioni da re!</h6>
-                <p> 
-                    Via Giuseppe Orsi - 80100 NAPOLI 
-                    <br>
-                    <a class=" mt-2 icon-link icon-link-hover text-white text-decoration-none" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                          </svg>
-                        081-7758182
-                      </a> 
-                    </p>
-                </div>
-                  <div class="col">
-                    <h3>Orari</h3>
-                    <p class="fw-bold mb-1">Lunedì <span class="fw-lighter">Chiuso</span></p>
-                    <p class="fw-bold">Martedi a Domenica <span class="fw-lighter">17:00 - 02:00</span></p>
-                    
-                  </div>
-                 <div class="col">
-                    <h3>Navigazione</h3>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html"> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> Ristorante</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html"> Menu</a>
-                        </li>
-                    </ul>
-
-                 </div>   
-        </div>
-    </div>
-  </footer>
-
-  <!--  MODALI  -->
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Prenota il tuo tavolo</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="">
-            <div class="form-floating mb-3">
-                <label for="floatingInput">La tua email</label>
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
               </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Nome e Cognome</span>
-                <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1">
-                <input type="text" class="form-control" placeholder="Cognome" aria-label="Cognome" aria-describedby="basic-addon1">
+            </div>
+            <div class="swiper-slide">
+              <div class="piatto-card">
+                <div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Paccheri al Ragù" loading="lazy"></picture></div>
+                <div class="piatto-card-body">
+                  <div class="piatto-card-name">Paccheri al Ragù</div>
+                  <div class="piatto-card-desc">Ragù napoletano cotto otto ore, ricotta salata stagionata</div>
+                  <div class="piatto-card-price">€ 16</div>
+                </div>
               </div>
-            <div class="row">
-                <div class="col">
-                    <label for="table-select">Scegli il Tavolo</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Qualsiasi</option>
-                        <option value="1">Terrazza</option>
-                        <option value="2">Sala</option>
-                        <option value="3">Veranda</option>
-                    </select>
-                </div>
-
-                <div class="col">
-                    <label for="date">Data e Ora</label>
-                    <input type="datetime-local" class="form-control" id="date">
-                </div>
-                
-                <div class="col">
-                    <label for="posti">N. Persone</label>
-                    <input type="number" class="form-control" id="posti">
-                </div>
-
             </div>
-            <div class="input-group mt-2">
-                <span class="input-group-text">Note</span>
-                <textarea class="form-control" placeholder="Hai qualche allergia alimentare o dieta particolare? scrivilo qui..." aria-label="With textarea"></textarea>
+            <div class="swiper-slide">
+              <div class="piatto-card">
+                <div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/paccheri-allo-scoglio-800x800.webp" alt="Scialatielli" loading="lazy"></picture></div>
+                <div class="piatto-card-body">
+                  <div class="piatto-card-name">Scialatielli ai Frutti di Mare</div>
+                  <div class="piatto-card-desc">Pasta fresca, cozze, gamberi, totani, pomodorino del Piennolo</div>
+                  <div class="piatto-card-price">€ 22</div>
+                </div>
+              </div>
             </div>
-        
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary">Invia</button>
+            <div class="swiper-slide">
+              <div class="piatto-card">
+                <div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/fave-e-cicoria-piatto800x800.webp" alt="Minestra" loading="lazy"></picture></div>
+                <div class="piatto-card-body">
+                  <div class="piatto-card-name">Minestra di Fagioli e Scarola</div>
+                  <div class="piatto-card-desc">Fagioli di Controne, scarola riccia, olio nuovo, pane cafone</div>
+                  <div class="piatto-card-price">€ 12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
+
+    <!-- ═══ SECONDI ═══ -->
+    <div class="cat-section" id="cat-secondi">
+      <div class="cat-section-head reveal">
+        <h2 class="cat-section-title"><em>Secondi Piatti</em></h2>
+        <p class="cat-section-note">Il pesce dipende da quello che è arrivato stamattina. Chiedete all'oste.</p>
+      </div>
+
+      <div class="piatti-list">
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pesce-piatto-800x800.webp" alt="Baccalà" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Baccalà alla Napoletana</div>
+            <div class="piatto-desc">Pomodoro San Marzano, olive di Gaeta, capperi di Pantelleria, uvetta e pinoli</div>
+            <div class="piatto-allergens">Pesce</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 20</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/agnello-800x800.webp" alt="Polpette al Sugo" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Polpette al Sugo</div>
+            <div class="piatto-desc">Macinato misto, mollica, pecorino romano, cotto direttamente nel ragù</div>
+            <div class="piatto-allergens">Glutine · Latte · Uova</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 15</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pesce-piatto-800x800.webp" alt="Frittura di Paranza" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Frittura di Paranza</div>
+            <div class="piatto-desc">Pesce misto di giornata, semola rimacinata di grano duro, limone di Amalfi</div>
+            <div class="piatto-allergens">Pesce · Glutine</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 24</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/agnello-800x800.webp" alt="Braciola" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Braciola di Maiale al Sugo</div>
+            <div class="piatto-desc">Uvetta, pinoli, prezzemolo — cotta nel ragù del lunedì per sei ore</div>
+            <div class="piatto-allergens">Frutta a guscio</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 17</span></div>
+        </div>
+      </div>
+
+      <div class="piatti-swiper-wrap">
+        <div class="swiper piatti-swiper" id="swiper-secondi">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pesce-piatto-800x800.webp" alt="Baccalà" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Baccalà alla Napoletana</div><div class="piatto-card-desc">San Marzano, olive di Gaeta, capperi di Pantelleria</div><div class="piatto-card-price">€ 20</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/agnello-800x800.webp" alt="Polpette" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Polpette al Sugo</div><div class="piatto-card-desc">Macinato misto, mollica, pecorino romano, cotto nel ragù</div><div class="piatto-card-price">€ 15</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pesce-piatto-800x800.webp" alt="Paranza" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Frittura di Paranza</div><div class="piatto-card-desc">Pesce misto di giornata, semola rimacinata, limone di Amalfi</div><div class="piatto-card-price">€ 24</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/agnello-800x800.webp" alt="Braciola" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Braciola di Maiale al Sugo</div><div class="piatto-card-desc">Uvetta, pinoli, prezzemolo — cotta nel ragù del lunedì</div><div class="piatto-card-price">€ 17</div></div></div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ DOLCI ═══ -->
+    <div class="cat-section" id="cat-dolci">
+      <div class="cat-section-head reveal">
+        <h2 class="cat-section-title"><em>Dolci</em></h2>
+        <p class="cat-section-note">Ricette della nonna. Il concetto di "dieta" viene gentilmente invitato a ripassare domani.</p>
+      </div>
+
+      <div class="piatti-list">
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Pastiera" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Pastiera Napoletana</div>
+            <div class="piatto-desc">Grano cotto, ricotta di pecora, acqua di fiori d'arancio — ricetta di famiglia</div>
+            <div class="piatto-allergens">Glutine · Latte · Uova</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 7</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Babà" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Babà al Rum</div>
+            <div class="piatto-desc">Rum giamaicano invecchiato, panna chantilly, amarena di Cantiano</div>
+            <div class="piatto-allergens">Glutine · Latte · Uova</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 6</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Sfogliatella" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Sfogliatella Riccia</div>
+            <div class="piatto-desc">Ricotta fresca, semolino, cedro candito, cannella — servita tiepida</div>
+            <div class="piatto-allergens">Glutine · Latte</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 4</span></div>
+        </div>
+        <div class="piatto-row reveal">
+          <div class="piatto-img-wrap"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Struffoli" loading="lazy"></picture></div>
+          <div class="piatto-info">
+            <div class="piatto-name">Struffoli</div>
+            <div class="piatto-desc">Miele millefiori campano, confettini colorati, scorze di arancia e limone</div>
+            <div class="piatto-allergens">Glutine · Uova</div>
+          </div>
+          <div class="piatto-price-wrap"><span class="piatto-price">€ 8</span></div>
+        </div>
+      </div>
+
+      <div class="piatti-swiper-wrap">
+        <div class="swiper piatti-swiper" id="swiper-dolci">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Pastiera" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Pastiera Napoletana</div><div class="piatto-card-desc">Grano cotto, ricotta di pecora, acqua di fiori d'arancio</div><div class="piatto-card-price">€ 7</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Babà" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Babà al Rum</div><div class="piatto-card-desc">Rum giamaicano invecchiato, chantilly, amarena</div><div class="piatto-card-price">€ 6</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Sfogliatella" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Sfogliatella Riccia</div><div class="piatto-card-desc">Ricotta, semolino, cedro candito, cannella</div><div class="piatto-card-price">€ 4</div></div></div></div>
+            <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture><img decoding="async" src="asset/immagini/pastiera-800x800.webp" alt="Struffoli" loading="lazy"></picture></div><div class="piatto-card-body"><div class="piatto-card-name">Struffoli</div><div class="piatto-card-desc">Miele millefiori, confettini, scorze d'arancia</div><div class="piatto-card-price">€ 8</div></div></div></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ VINI ═══ -->
+    <div class="cat-section" id="cat-vini">
+      <div class="cat-section-head reveal">
+        <h2 class="cat-section-title"><em>Vini</em></h2>
+        <p class="cat-section-note">Solo Campania. Da piccoli produttori che conosciamo di persona. In caraffa se preferite.</p>
+      </div>
+
+      <div class="vini-grid">
+        <div class="vino-row reveal">
+          <div class="vino-img-wrap"><picture><img decoding="async" src="asset/immagini/aglianico-vino-800x800.webp" alt="Greco di Tufo" loading="lazy"></picture></div>
+          <div class="vino-info">
+            <div class="vino-name">Greco di Tufo DOCG</div>
+            <div class="vino-desc">Feudi di San Gregorio · Irpinia · 2022<br>Bianco minerale, fresco, floreale</div>
+          </div>
+          <div class="vino-price">€ 28</div>
+        </div>
+        <div class="vino-row reveal" style="transition-delay:.1s">
+          <div class="vino-img-wrap"><picture><img decoding="async" src="asset/immagini/aglianico-vino-800x800.webp" alt="Aglianico" loading="lazy"></picture></div>
+          <div class="vino-info">
+            <div class="vino-name">Aglianico del Taburno</div>
+            <div class="vino-desc">Fontanavecchia · Sannio · 2019<br>Rosso strutturato, tannico, speziato</div>
+          </div>
+          <div class="vino-price">€ 32</div>
+        </div>
+        <div class="vino-row reveal" style="transition-delay:.15s">
+          <div class="vino-img-wrap"><picture><img decoding="async" src="asset/immagini/aglianico-vino-800x800.webp" alt="Fiano" loading="lazy"></picture></div>
+          <div class="vino-info">
+            <div class="vino-name">Fiano di Avellino DOCG</div>
+            <div class="vino-desc">Mastroberardino · Irpinia · 2021<br>Bianco elegante, nocciola, miele</div>
+          </div>
+          <div class="vino-price">€ 30</div>
+        </div>
+        <div class="vino-row reveal" style="transition-delay:.2s">
+          <div class="vino-img-wrap"><picture><img decoding="async" src="asset/immagini/primitivo-vino-800x800.webp" alt="Lacryma Christi" loading="lazy"></picture></div>
+          <div class="vino-info">
+            <div class="vino-name">Lacryma Christi del Vesuvio</div>
+            <div class="vino-desc">Cantine del Vesuvio · 2020<br>Rosso vulcanico, ciliegia, fumo</div>
+          </div>
+          <div class="vino-price">€ 25</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA ALLERGENI -->
+    <div class="menu-nota reveal">
+      <p>Il menù è indicativo e cambia con la stagione e la disponibilità del mercato. Per informazioni su allergeni e intolleranze specifiche, chiedete al personale di sala.</p>
+      <p>Coperto € 2,50 a persona · Il servizio non è incluso.</p>
+    </div>
+
   </div>
+</section>
+
+<!-- ── CTA PRENOTA ── -->
+<section class="cta" id="prenota">
+  <div class="cta-inner reveal">
+    <span class="cta-script">vieni a trovarci</span>
+    <h2 class="cta-title">Un tavolo.<br>Stasera.</h2>
+    <p class="cta-body">Non serve molto. Dicci a che ora siete, quanti siete. L'oste pensa al resto.</p>
+    <div class="cta-divider"></div>
+    <button class="btn-tc" style="margin:2rem 0;" onclick="document.getElementById('bookingModal').showModal()"><span>Prenota Ora</span></button>
+    <div class="cta-orari">Lun–Ven 12:00–23:00 &nbsp;·&nbsp; Sab–Dom 12:00–24:00</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left;">
+    <div class="footer-col">
+      <div class="f-name">Osteria del Sud</div>
+      <div class="f-sub" style="margin-bottom: 1.5rem;">Cucina Napoletana · Napoli</div>
+      <p style="color: rgba(255,255,255,0.6); font-style: italic;">La differenza non è nel menù, è nell'atteggiamento. Lasciati consigliare.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navigazione</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ristorante.html">Il Ristorante</a></li>
+        <li><a href="menu.html">Il Menù</a></li>
+        <li><a href="#" onclick="document.getElementById('bookingModal').showModal(); return false;">Prenota</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Termini e Condizioni</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contatti</div>
+      <p>Via Giuseppe Orsi 42<br>80128 Napoli (NA)</p>
+      <p style="margin-top: .8rem;">T. <a href="tel:+390810000000">+39 081 000 0000</a><br>E. <a href="mailto:info@osteriadelsud.it">info@osteriadelsud.it</a></p>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(245,237,214,.06); margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .75rem; color: rgba(245,237,214,.3);">
+    &copy; 2026 Osteria del Sud. Design: Concept Project.
+  </div>
+</footer>
 
 
+<!-- ── BOOKING MODAL ── -->
+<dialog id="bookingModal" class="booking-modal">
+  <div class="bm-inner">
+    <button class="bm-close" aria-label="Chiudi" onclick="document.getElementById('bookingModal').close(); document.getElementById('bmFormContainer').style.display='block'; document.getElementById('bmSuccess').style.display='none'; document.getElementById('bookingForm').reset();">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const specialtySwiper = new Swiper('.specialtySwiper', {
-        loop: true,
-        autoplay: { delay: 4000 },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        effect: 'slide'
-      });
+    <div id="bmFormContainer">
+      <h2 class="bm-title">Il tuo Tavolo</h2>
+      <span class="bm-sub">Prenotazione Online</span>
 
-      const wineSwiper = new Swiper('.wineSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: { delay: 3500 },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          576: { slidesPerView: 2 },
-          992: { slidesPerView: 3 },
-          1200: { slidesPerView: 4 }
-        }
-      });
-    </script>
+      <form class="bm-form" id="bookingForm" onsubmit="event.preventDefault(); document.getElementById('bmFormContainer').style.display='none'; document.getElementById('bmSuccess').style.display='block';">
+        <div class="bm-row">
+          <div class="bm-field">
+            <label for="bDate">Data</label>
+            <input type="date" id="bDate" class="bm-input" required>
+          </div>
+          <div class="bm-field">
+            <label for="bTime">Ora</label>
+            <select id="bTime" class="bm-select" required>
+              <option value="" disabled selected>Seleziona orario</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bGuests">Ospiti</label>
+          <input type="number" id="bGuests" class="bm-input" min="1" max="12" value="2" required>
+        </div>
+
+        <div class="bm-field">
+          <label>Preferenza Tavolo (Opzionale)</label>
+          <div class="bm-radio-group">
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="indifferente" checked>
+              <span>Indifferente (lascia fare all'oste)</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="finestra">
+              <span>Vicino alla finestra</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="esterno">
+              <span>Tavolo all'esterno (dehors)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label>Esigenze Alimentari</label>
+          <div class="bm-checkboxes">
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegetariano">
+              <span>Vegetariano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegano">
+              <span>Vegano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="celiachia">
+              <span>Senza Glutine</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bNotes">Note o Allergie</label>
+          <textarea id="bNotes" class="bm-textarea" placeholder="Segnala eventuali allergie o richieste speciali..."></textarea>
+        </div>
+
+        <div class="bm-submit">
+          <button type="submit" class="btn-tc"><span>Conferma Prenotazione</span></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="bmSuccess" class="bm-success">
+      <svg class="bm-success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <h3 class="bm-success-title">Tavolo Riservato.</h3>
+      <p class="bm-success-text">Ti aspettiamo all'Osteria del Sud.<br>A breve riceverai una conferma via email.</p>
+    </div>
+
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="asset/js/main.js"></script>
 </body>
 </html>

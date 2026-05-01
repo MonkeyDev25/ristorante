@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Ristorante — Osteria del Sud</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Osteria del Sud</a>
+  <div class="nav-coords"></div>
+  <ul class="nav-links">
+    <li><a href="ristorante.html" style="color:var(--ivory)">Il Ristorante</a></li>
+    <li><a href="menu.html">Il Menù</a></li>
+    <li><button class="nav-cta" style="background:transparent; cursor:pointer;" onclick="document.getElementById('bookingModal').showModal()">Prenota</button></li>
+  </ul>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-bg" id="pageHeroBg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-breadcrumb">
+      <a href="index.html">Home</a>
+      <span>→</span>
+      <span>Il Ristorante</span>
+    </div>
+    <h1 class="page-title">
+      La nostra<br><em>storia.</em>
+    </h1>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ── STORIA ── -->
+<section class="storia">
+  <div class="storia-inner">
+
+    <div class="storia-img reveal">
+      <picture>
+        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.webp" type="image/webp">
+        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.jpg">
+        <img decoding="async" src="asset/immagini/filosofia-1200x1500-lg-desktop.jpg" alt="Interno Osteria del Sud" loading="lazy">
+      </picture>
+      <div class="storia-img-caption">Via Giuseppe Orsi · Napoli</div>
+    </div>
+
+    <div class="storia-text reveal" style="transition-delay:.15s">
+      <span class="mono-label">01 — La Storia</span>
+      <p class="storia-intro">
+        Non è mai stato un posto silenzioso. E non aveva intenzione di diventarlo.
+      </p>
+      <div class="storia-body">
+        <p>
+          L'Osteria del Sud nasce da un'idea semplice: che il cibo migliore è quello fatto con le mani di qualcuno che ci tiene davvero. Non c'era un piano, non c'era un investitore. C'era una cucina, un fornitore di fiducia al mercato di Porta Nolana, e la certezza che Napoli meritasse un posto così.
+        </p>
+        <p>
+          Negli anni i tavoli si sono riempiti di storie. Famiglie che tornano ogni domenica, turisti che non trovano più la via d'uscita, innamorati che hanno deciso di tornare per il secondo anniversario. Il menù cambia con le stagioni — l'atmosfera no.
+        </p>
+        <p>
+          L'oste conosce il nome di chi entra per la seconda volta. La terza volta, ti porta già il vino senza che tu lo chieda.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ── VALORI ── -->
+<section class="valori">
+  <div class="valori-inner">
+    <div class="valori-head reveal">
+      <span class="mono-label">02 — La Filosofia</span>
+      <h2 class="section-title">La sostanza<br><em>vince sulla forma.</em></h2>
+    </div>
+    <div class="valori-grid">
+
+      <div class="valore-card reveal">
+        <span class="valore-num">01 —</span>
+        <div class="valore-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 40h32"/><path d="M16 40V20l8-6 8 6v20"/>
+            <path d="M21 40v-8h6v8"/><circle cx="24" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="valore-title">Il territorio</h3>
+        <p class="valore-body">Ogni mattina al mercato di Porta Nolana. Prodotti a km zero, selezionati a mano, stagione per stagione.</p>
+      </div>
+
+      <div class="valore-card reveal" style="transition-delay:.1s">
+        <span class="valore-num">02 —</span>
+        <div class="valore-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 6v36"/><path d="M12 18c0-7 24-7 24 0"/><path d="M8 30c0 8 32 8 32 0"/>
+          </svg>
+        </div>
+        <h3 class="valore-title">La tradizione</h3>
+        <p class="valore-body">Ricette tramandate, nessuna reinvenzione inutile. Il ragù cuoce otto ore perché non c'è altra via.</p>
+      </div>
+
+      <div class="valore-card reveal" style="transition-delay:.2s">
+        <span class="valore-num">03 —</span>
+        <div class="valore-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="16"/>
+            <path d="M24 14v10l6 4"/>
+          </svg>
+        </div>
+        <h3 class="valore-title">Il tempo</h3>
+        <p class="valore-body">La cucina non ha scorciatoie. Il tempo è l'ingrediente che non si può comprare e non si può simulare.</p>
+      </div>
+
+      <div class="valore-card reveal" style="transition-delay:.3s">
+        <span class="valore-num">04 —</span>
+        <div class="valore-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 24c0-9 28-9 32-2"/>
+            <path d="M10 32c4 6 26 6 28-2"/>
+            <path d="M24 14v20"/>
+          </svg>
+        </div>
+        <h3 class="valore-title">Il vino</h3>
+        <p class="valore-body">Solo etichette della Campania, da piccoli produttori che conosciamo di persona. Servito in caraffa se lo vuoi così.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CITAZIONE ── -->
+<section class="citazione">
+  <div class="citazione-inner reveal">
+    <span class="citazione-virgolette">"</span>
+    <p class="citazione-testo">
+      Spesso non c'è un menù scritto, o se c'è, l'oste ti dirà comunque: oggi abbiamo fatto questo, fidati di me.
+    </p>
+    <span class="citazione-fonte">L'esperienza — Osteria del Sud</span>
+  </div>
+</section>
+
+<!-- ── ATMOSFERA ── -->
+<section class="atmosfera">
+  <div class="atmosfera-head reveal">
+    <span class="mono-label">03 — L'Atmosfera</span>
+    <h2 class="section-title">Non è mai un posto<br><em>silenzioso.</em></h2>
+  </div>
+
+  <div class="swiper atm-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide atm-slide">
+        <div class="atm-img">
+          <picture>
+            <img decoding="async" src="asset/immagini/sala-interna-600x800.jpg" alt="Sala principale" loading="lazy">
+          </picture>
+          <span class="atm-caption">Sala Principale · Sera</span>
+        </div>
+      </div>
+      <div class="swiper-slide atm-slide">
+        <div class="atm-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
+            <img decoding="async" src="asset/immagini/cucina-1200x1600.webp" alt="Cucina" loading="lazy">
+          </picture>
+          <span class="atm-caption">Cucina · Preparazione</span>
+        </div>
+      </div>
+      <div class="swiper-slide atm-slide">
+        <div class="atm-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/vino%20della%20casa%20600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
+            <img decoding="async" src="asset/immagini/vino%20della%20casa%201200x1600.webp" alt="Cantina" loading="lazy">
+          </picture>
+          <span class="atm-caption">Cantina · Selezione Vini</span>
+        </div>
+      </div>
+      <div class="swiper-slide atm-slide">
+        <div class="atm-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
+            <img decoding="async" src="asset/immagini/convivio-1200x1600.webp" alt="Convivio" loading="lazy">
+          </picture>
+          <span class="atm-caption">Tavolo · Convivio</span>
+        </div>
+      </div>
+      <div class="swiper-slide atm-slide">
+        <div class="atm-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo%20imbandito-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
+            <img decoding="async" src="asset/immagini/tavolo%20imbandito-1200x1600.webp" alt="Vicoli" loading="lazy">
+          </picture>
+          <span class="atm-caption">Vicoli · Esterno</span>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="atm-text">
+    <div class="atm-fact reveal">
+      <span class="atm-fact-label">L'ambiente</span>
+      <p class="atm-fact-text">Tavoli di legno massiccio, pareti con utensili d'epoca e foto in bianco e nero. Nessuna pretesa di sembrare quello che non si è.</p>
+    </div>
+    <div class="atm-fact reveal" style="transition-delay:.1s">
+      <span class="atm-fact-label">Il rumore</span>
+      <p class="atm-fact-text">Il tintinnio dei bicchieri spessi, le risate forti, il dialetto che si mescola al profumo del soffritto. Non è mai silenzioso.</p>
+    </div>
+    <div class="atm-fact reveal" style="transition-delay:.2s">
+      <span class="atm-fact-label">L'accoglienza</span>
+      <p class="atm-fact-text">Non sei un cliente, sei un ospite. L'oste ti porta un piattino di fave e cicoria senza che tu l'abbia chiesto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA PRENOTA ── -->
+<section class="cta" id="prenota">
+  <div class="cta-inner reveal">
+    <span class="cta-script">vieni a trovarci</span>
+    <h2 class="cta-title">Un tavolo.<br>Stasera.</h2>
+    <p class="cta-body">Non serve molto. Dicci a che ora siete, quanti siete. L'oste pensa al resto.</p>
+    <div class="cta-divider"></div>
+    <button class="btn-tc" style="margin:2rem 0;" onclick="document.getElementById('bookingModal').showModal()"><span>Prenota Ora</span></button>
+    <div class="cta-orari">Lun–Ven 12:00–23:00 &nbsp;·&nbsp; Sab–Dom 12:00–24:00</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left;">
+    <div class="footer-col">
+      <div class="f-name">Osteria del Sud</div>
+      <div class="f-sub" style="margin-bottom: 1.5rem;">Cucina Napoletana · Napoli</div>
+      <p style="color: rgba(255,255,255,0.6); font-style: italic;">La differenza non è nel menù, è nell'atteggiamento. Lasciati consigliare.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navigazione</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ristorante.html">Il Ristorante</a></li>
+        <li><a href="menu.html">Il Menù</a></li>
+        <li><a href="#" onclick="document.getElementById('bookingModal').showModal(); return false;">Prenota</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Termini e Condizioni</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contatti</div>
+      <p>Via Giuseppe Orsi 42<br>80128 Napoli (NA)</p>
+      <p style="margin-top: .8rem;">T. <a href="tel:+390810000000">+39 081 000 0000</a><br>E. <a href="mailto:info@osteriadelsud.it">info@osteriadelsud.it</a></p>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(245,237,214,.06); margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .75rem; color: rgba(245,237,214,.3);">
+    &copy; 2026 Osteria del Sud. Design: Concept Project.
+  </div>
+</footer>
+
+
+<!-- ── BOOKING MODAL ── -->
+<dialog id="bookingModal" class="booking-modal">
+  <div class="bm-inner">
+    <button class="bm-close" aria-label="Chiudi" onclick="document.getElementById('bookingModal').close(); document.getElementById('bmFormContainer').style.display='block'; document.getElementById('bmSuccess').style.display='none'; document.getElementById('bookingForm').reset();">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <div id="bmFormContainer">
+      <h2 class="bm-title">Il tuo Tavolo</h2>
+      <span class="bm-sub">Prenotazione Online</span>
+
+      <form class="bm-form" id="bookingForm" onsubmit="event.preventDefault(); document.getElementById('bmFormContainer').style.display='none'; document.getElementById('bmSuccess').style.display='block';">
+        <div class="bm-row">
+          <div class="bm-field">
+            <label for="bDate">Data</label>
+            <input type="date" id="bDate" class="bm-input" required>
+          </div>
+          <div class="bm-field">
+            <label for="bTime">Ora</label>
+            <select id="bTime" class="bm-select" required>
+              <option value="" disabled selected>Seleziona orario</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bGuests">Ospiti</label>
+          <input type="number" id="bGuests" class="bm-input" min="1" max="12" value="2" required>
+        </div>
+
+        <div class="bm-field">
+          <label>Preferenza Tavolo (Opzionale)</label>
+          <div class="bm-radio-group">
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="indifferente" checked>
+              <span>Indifferente (lascia fare all'oste)</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="finestra">
+              <span>Vicino alla finestra</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="esterno">
+              <span>Tavolo all'esterno (dehors)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label>Esigenze Alimentari</label>
+          <div class="bm-checkboxes">
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegetariano">
+              <span>Vegetariano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegano">
+              <span>Vegano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="celiachia">
+              <span>Senza Glutine</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bNotes">Note o Allergie</label>
+          <textarea id="bNotes" class="bm-textarea" placeholder="Segnala eventuali allergie o richieste speciali..."></textarea>
+        </div>
+
+        <div class="bm-submit">
+          <button type="submit" class="btn-tc"><span>Conferma Prenotazione</span></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="bmSuccess" class="bm-success">
+      <svg class="bm-success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <h3 class="bm-success-title">Tavolo Riservato.</h3>
+      <p class="bm-success-text">Ti aspettiamo all'Osteria del Sud.<br>A breve riceverai una conferma via email.</p>
+    </div>
+
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="asset/js/main.js"></script>
+</body>
+</html>

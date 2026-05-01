@@ -1,187 +1,575 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ristorante</title>
-    <link rel="stylesheet" href="stileristorante.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osteria del Sud — Cucina Napoletana</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- Stile progetto -->
+  <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-  <!-- MENU-->
-  <header>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark" style="background-color: rgba(45, 36, 30, 0.9);">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="index.html" style="color: var(--sud-gold);">OSTERIA DEL SUD</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="about.html">Il Ristorante</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="menu.html">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.facebook.com/cottoemangiatoviaorsi/">
-                   <i class="bi bi-facebook text-white p-4"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="https://www.instagram.com/cotto_e_mangiato_vomero">
-                    <i class="bi bi-instagram text-white"></i>                
-                  </a>
-                </li>
-                
-              </ul>
-            </div>
+
+<!-- ── NAV ── -->
+<nav class="nav" id="mainNav">
+  <a href="#" class="nav-logo">Osteria del Sud</a>
+  <div class="nav-coords"></div>
+  <ul class="nav-links">
+    <li><a href="ristorante.html">Il Ristorante</a></li>
+    <li><a href="menu.html">Il Menù</a></li>
+    <li><button class="nav-cta" style="background:transparent; cursor:pointer;" onclick="document.getElementById('bookingModal').showModal()">Prenota</button></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <picture>
+  <source media="(max-width: 767px)"  srcset="asset/immagini/hero-800x450-sm-mobile.webp"  type="image/webp">
+  <source media="(max-width: 767px)"  srcset="asset/immagini/hero-800x450-sm-mobile.jpg">
+  <source media="(max-width: 1279px)" srcset="asset/immagini/hero%201280x720-md-tablet.webp"  type="image/webp">
+  <source media="(max-width: 1279px)" srcset="asset/immagini/hero-1280x720-md-tablet.jpg">
+  <source media="(max-width: 1919px)" srcset="asset/immagini/hero%201920x1080-lg-desktop.webp"  type="image/webp">
+  <source media="(max-width: 1919px)" srcset="asset/immagini/hero-1920x1080-lg-desktop.jpg">
+  <img decoding="async" src="asset/immagini/hero-2560x1440-retina4k.jpg" alt="Sala principale Osteria del Sud" class="hero-ph" fetchpriority="high">
+</picture>
+  <div class="hero-overlay"></div>
+  <div class="hero-ph-label">FOTOGRAFIA · sala principale · luce radente</div>
+  <div class="hero-content" id="heroContent">
+    <span class="hero-script">benvenuto a Napoli</span>
+    <div class="glow-sep"></div>
+    <h1 class="hero-title">Fidati<br><em>di me.</em></h1>
+    <p class="hero-claim">Un tavolo di legno, il dialetto che si mescola al profumo del soffritto. Oggi abbiamo fatto questo, e basta.</p>
+    <a href="#menu" class="btn-tc"><span>Scopri il Menù</span></a>
+  </div>
+  <div class="scroll-cue">SCROLL</div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ── TRE PILLAR ── -->
+<section class="pillars" id="about">
+  <div class="about-head">
+    <span class="script-label">benvenuti</span>
+    <h2 class="section-title">L'Osteria <em>del Sud</em></h2>
+  </div>
+  <div class="pillars-grid">
+
+    <a href="#filosofia" class="pillar reveal">
+      <div class="pillar-icon">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 54h44"/><path d="M14 54V28l18-12 18 12v26"/>
+          <path d="M26 54V40h12v14"/><path d="M14 28h36"/>
+        </svg>
+      </div>
+      <span class="pillar-num">01</span>
+      <h3 class="pillar-title">Il Ristorante</h3>
+      <p class="pillar-body">Un tavolo di legno, il dialetto che si mescola al profumo del soffritto. Tradizione napoletana servita senza filtri.</p>
+      <span class="pillar-link">Scopri di più →</span>
+    </a>
+
+    <a href="#menu" class="pillar reveal" style="transition-delay:.15s">
+      <div class="pillar-icon">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 8v22c0 3-2 5-5 5s-5-2-5-5V8"/><path d="M17 8v48"/>
+          <path d="M44 8c-4 0-8 6-8 14s4 12 8 12"/><path d="M44 34v22"/>
+        </svg>
+      </div>
+      <span class="pillar-num">02</span>
+      <h3 class="pillar-title">Il Menù</h3>
+      <p class="pillar-body">Ricette tramandate, prodotti del mercato di Porta Nolana, vini della Campania. La stagione decide, noi eseguiamo.</p>
+      <span class="pillar-link">Sfoglia il menù →</span>
+    </a>
+
+    <a href="#prenota" class="pillar reveal" style="transition-delay:.3s">
+      <div class="pillar-icon">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="10" y="14" width="44" height="42" rx="1"/>
+          <path d="M10 24h44"/><path d="M22 8v12"/><path d="M42 8v12"/>
+          <circle cx="32" cy="40" r="5"/>
+        </svg>
+      </div>
+      <span class="pillar-num">03</span>
+      <h3 class="pillar-title">Prenota</h3>
+      <p class="pillar-body">Dicci a che ora siete e quanti siete. L'oste pensa al resto. Aperti tutti i giorni a pranzo e a cena.</p>
+      <span class="pillar-link">Prenota un tavolo →</span>
+    </a>
+
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ── FILOSOFIA ── -->
+<section class="filosofia" id="filosofia">
+  <div class="filo-inner">
+
+    <div class="filo-left reveal">
+      <span class="mono-label">02 — La Filosofia</span>
+      <h2 class="filo-title">La differenza<br><em>non è nel menù.</em></h2>
+      <p class="filo-body">È nell'atteggiamento. Il menù cambia quando cambia il mercato. L'oste ti guarda negli occhi e ti dice cosa mangiare. La cucina non ha segreti — solo tempo e rispetto per la materia prima.</p>
+      <ul class="filo-list">
+        <li><span class="filo-n">01</span><span class="filo-t">Prodotti a km zero, selezionati ogni mattina al mercato di Porta Nolana.</span></li>
+        <li><span class="filo-n">02</span><span class="filo-t">Ricette tramandate di generazione in generazione — nessuna reinvenzione inutile.</span></li>
+        <li><span class="filo-n">03</span><span class="filo-t">Vini della Campania, da piccoli produttori che conosciamo di persona.</span></li>
+        <li><span class="filo-n">04</span><span class="filo-t">Nessun menù fisso. La stagione decide. Noi eseguiamo.</span></li>
+      </ul>
+    </div>
+
+    <div class="filo-ph reveal ph-wrap" style="transition-delay:.2s; overflow:hidden; position:relative;">
+      <picture>
+        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.webp" type="image/webp">
+        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.jpg">
+        <source media="(min-width: 800px)" srcset="asset/immagini/filosofia-1200x1500-lg-desktop.webp" type="image/webp">
+        <img decoding="async" src="asset/immagini/filosofia-1200x1500-lg-desktop.jpg" alt="Cucina Osteria del Sud" class="filo-ph-inner" loading="lazy">
+      </picture>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-cell">
+      <div class="stat-n" data-target="32">0</div>
+      <div class="stat-l">Anni di Storia</div>
+    </div>
+    <div class="stat-vl"></div>
+    <div class="stat-cell">
+      <div class="stat-n" data-target="47">0</div>
+      <div class="stat-l">Piatti in Carta</div>
+    </div>
+    <div class="stat-vl"></div>
+    <div class="stat-cell">
+      <div class="stat-n" data-target="120">0</div>
+      <div class="stat-l">Etichette di Vino</div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+
+<!-- ── IL PIATTO DELL'OSTE ── -->
+<section class="oste-special">
+  <div class="oste-inner">
+    <div class="oste-img-wrap reveal">
+      <div class="oste-badge">Specialità di Oggi</div>
+      <img decoding="async" src="asset/immagini/pasta-alla-norma-800x800.webp" alt="Il piatto dell'oste" loading="lazy">
+    </div>
+    <div class="oste-text reveal" style="transition-delay:.15s">
+      <span class="oste-label">Il piatto dell'oste</span>
+      <h2 class="oste-title"><em>Ziti Lardiati.</em></h2>
+      <p class="oste-desc">
+        Non c'è un giorno prestabilito. Se la mattina al mercato il pomodoro del piennolo e la sugna sono quelli giusti, l'oste prepara la lardiata. Una ricetta povera, che richiede pochissimi ingredienti ma un'attenzione maniacale ai tempi e al calore. Lasciati consigliare.
+      </p>
+      <div class="oste-price">€ 14</div>
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ── MENU ── -->
+<section class="menu-sec" id="menu">
+  <div class="menu-inner">
+    <div class="menu-right reveal">
+
+      <div class="menu-head">
+        <span class="mono-label">03 — Il Menù</span>
+        <h2 class="menu-title">Quello che<br><em>c'è, oggi.</em></h2>
+        <p class="menu-sub">Il menù cambia con la stagione. L'oste vi dirà cosa consigliare.</p>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-pane="primi">Primi</button>
+        <button class="menu-tab" data-pane="secondi">Secondi</button>
+        <button class="menu-tab" data-pane="dolci">Dolci</button>
+        <button class="menu-tab" data-pane="vini">Vini</button>
+      </div>
+
+      <!-- PRIMI -->
+      <div class="menu-pane active" id="pane-primi">
+        <div class="mi">
+          <img
+  src="asset/immagini/paccheri-allo-scoglio-800x800.webp"
+  alt="paccheri allo scoglio"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Paccheri allo scoglio</div>
+            <div class="mi-desc">paccheri freschi, cozze, vongole, scampi, gamberi, calamari, pomodorino del Piennolo</div>
           </div>
-        </nav>
-      </header>  
-      
-<main>
-   <!-- SWIPER HERO SLIDER -->
-   <div class="swiper myHeroSwiper">
+          <div class="mi-dots"></div><div class="mi-price">€ 18</div>
+        </div>
+        <div class="mi">
+          <img
+  src="asset/immagini/pasta-alla-norma-800x800.webp"
+  alt="pasta alla norma"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Pasta alla Norma</div>
+            <div class="mi-desc">maccheroni al ferretto, melanzane, pomodoro fresco, ricotta salata stagionata</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 16</div>
+        </div>
+        <div class="mi">
+          <img
+  src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp"
+  alt="orecchiette con cime di rapa"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Orecchiette con cime di rapa</div>
+            <div class="mi-desc">orecchiette fatte in casa, cime di rapa, aglio, olio extra vergine d'oliva, peperoncino</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 22</div>
+        </div>
+       
+      </div>
+
+      <!-- SECONDI -->
+      <div class="menu-pane" id="pane-secondi">
+        <div class="mi">
+          <img
+  src="asset/immagini/agnello-800x800.webp"
+  alt="agnello"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Agnello</div>
+            <div class="mi-desc">costolette d'agnello, patate, rosmarino, aglio, olio extra vergine d'oliva</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 20</div>
+        </div>
+        <div class="mi">
+          <img
+  src="asset/immagini/pesce-piatto-800x800.jpg"
+  alt="pesce del giorno"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Pesce del giorno</div>
+            <div class="mi-desc">pesce fresco di giornata, cotto alla brace o al forno</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 20</div>
+        </div>
+         <div class="mi">
+          <img
+  src="asset/immagini/fave-e-cicoria-piatto800x800.webp"
+  alt="fave e cicoria"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Fave e Cicoria</div>
+            <div class="mi-desc">fave e cicoria di Pantelleria</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 12</div>
+        </div>
+      </div>
+
+      <!-- DOLCI -->
+      <div class="menu-pane" id="pane-dolci">
+        <div class="mi">
+          <img
+  src="asset/immagini/pastiera-800x800.webp"
+  alt="pastiera napoletana"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Pastiera Napoletana</div>
+            <div class="mi-desc">grano cotto, ricotta di pecora, acqua di fiori d'arancio</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 7</div>
+        </div>
+        <div class="mi">
+          <img
+  src="asset/immagini/pastiera-800x800.webp"
+  alt="struffoli"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Struffoli</div>
+            <div class="mi-desc">miele millefiori, confettini, scorze d'arancia</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 8</div>
+        </div>
+      </div>
+
+      <!-- VINI -->
+      <div class="menu-pane" id="pane-vini">
+        <div class="mi">
+          <img
+  src="asset/immagini/aglianico-vino-800x800.webp"
+  alt="aglianico"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Falanghina DOCG</div>
+            <div class="mi-desc">Cantine del Vesuvio · 2020</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 28</div>
+        </div>
+        <div class="mi">
+          <img
+  src="asset/immagini/primitivo-vino-800x800.webp"
+  alt="primitivo di manduria"
+  class="mi-img"
+  width="68" height="68"
+  loading="lazy"
+>
+          <div class="mi-left">
+            <div class="mi-name">Primitivo di Manduria</div>
+            <div class="mi-desc">Torrevento · Puglia · 2023</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 25</div>
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="glow-line"></div>
+
+<!-- ── GALLERY ── -->
+<section class="gallery">
+  <div class="gallery-head reveal">
+    <span class="mono-label">04 — Atmosfera</span>
+  </div>
+  <div class="swiper swiper-gallery">
     <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1920" alt="Atmosfera Sud Italia">
-        <div class="swiper-caption">
-          <h2 class="display-1 fw-bold">Sapori Veraci</h2>
-          <p class="lead">Dalla Puglia alla Sicilia, il meglio della tradizione mediterranea.</p>
-          <a href="menu.html" class="btn btn-primary">Esplora il Menu</a>
-        </div>
+      <div class="swiper-slide g-slide">
+        <picture>
+  <img decoding="async" src="asset/immagini/sala-interna-600x800.jpg" alt="Sala Principale · Sera" class="g-img" loading="lazy">
+</picture>
       </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=1920" alt="Pasta artigianale">
-        <div class="swiper-caption">
-          <h2 class="display-1 fw-bold">Pasta Fatta in Casa</h2>
-          <p class="lead">Orecchiette, cavatelli e paccheri trafilati al bronzo.</p>
-          <a href="menu.html" class="btn btn-primary">Prenota un Tavolo</a>
-        </div>
+      <div class="swiper-slide g-slide">
+        <picture>
+  <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
+  <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
+  <img decoding="async" src="asset/immagini/cucina-1200x1600.webp" alt="Cucina · Preparazione" class="g-img" loading="lazy">
+</picture>
       </div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-  
-<!-- 3 CALL TO ACTION-->     
-  <section class="call-to-action">
-    <div class="container py-5">
-     <div class="row">
-        <div class="col text-center my-5">
-            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400" class="rounded-circle img-resized mb-3" alt="La nostra cucina" loading="lazy">
-            <h3 class="mt-4 fw-bold">Il Ristorante</h3>
-            <p class="text-muted">Scopri la nostra storia, la filosofia e l'ambiente che ci rende unici.</p>
-            <a href="about.html" class="btn btn-primary">Scopri di più</a>
-        </div>
-
-        <div class="col text-center my-5">
-            <img src="https://images.unsplash.com/photo-1577214468488-ca3cd147d515?w=400" class="rounded-circle img-resized mb-3" alt="I nostri chef" loading="lazy">
-            <h3 class="mt-4 fw-bold">Il Nostro Staff</h3>
-            <p class="text-muted">Incontra i volti e le mani che ogni giorno creano magia in cucina e in sala.</p>
-            <a href="about.html#staff-section" class="btn btn-primary">Conosci il team</a>
-        </div>
-
-    
-        <div class="col text-center my-5">
-            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400" class="rounded-circle img-resized mb-3" alt="Piatti del menu" loading="lazy">
-            <h3 class="mt-4 fw-bold">Il Nostro Menu</h3>
-            <p class="text-muted">Dagli antipasti ai dessert, un viaggio di sapori autentici e indimenticabili.</p>
-            <a href="menu.html" class="btn btn-primary">Esplora il Menu</a>
-        </div>
+      <div class="swiper-slide g-slide">
+        <picture>
+  <source media="(max-width: 767px)" srcset="asset/immagini/vino%20della%20casa%20600x800.webp" type="image/webp">
+  <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
+  <img decoding="async" src="asset/immagini/vino%20della%20casa%201200x1600.webp" alt="Cantina · Selezione Vini" class="g-img" loading="lazy">
+</picture>
+      </div>
+      <div class="swiper-slide g-slide">
+        <picture>
+  <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
+  <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
+  <img decoding="async" src="asset/immagini/convivio-1200x1600.webp" alt="Tavolo · Convivio" class="g-img" loading="lazy">
+</picture>
+      </div>
+      <div class="swiper-slide g-slide">
+        <picture>
+  <source media="(max-width: 767px)" srcset="asset/immagini/tavolo%20imbandito-600x800.webp" type="image/webp">
+  <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
+  <img decoding="async" src="asset/immagini/tavolo%20imbandito-1200x1600.webp" alt="Tavolo · Imbandito" class="g-img" loading="lazy">
+</picture>
+      </div>
     </div>
   </div>
-  </section>
+</section>
 
-<!-- TESTI DESCRITTIVI -->
-  <section class="container-fluid py-5">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="p-5 d-flex justify-content-center flex-column h-100">
-                <h2 class="display-5 fw-bold">Un'esperienza culinaria <span class="text-muted">che ti conquisterà</span></h2>
-                <p class="lead">All'Osteria del Sud, ogni piatto racconta una storia di tradizione e innovazione. Utilizziamo solo ingredienti freschi e di stagione, selezionati con cura dai migliori produttori locali. Lasciati guidare in un viaggio di sapori autentici e indimenticabili.</p>
-            </div>
-        </div> 
-        <div class="col-md-6 p-0">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800" class="img-fluid" alt="Atmosfera osteria" loading="lazy">
-        </div>
+<!-- ── CTA PRENOTA ── -->
+<section class="cta" id="prenota">
+  <div class="cta-inner reveal">
+    <span class="cta-script">vieni a trovarci</span>
+    <h2 class="cta-title">Un tavolo.<br>Stasera.</h2>
+    <p class="cta-body">Non serve molto. Dicci a che ora siete, quanti siete. L'oste pensa al resto.</p>
+    <div class="cta-divider"></div>
+    <button class="btn-tc" style="margin:2rem 0;" onclick="document.getElementById('bookingModal').showModal()"><span>Prenota Ora</span></button>
+    <div class="cta-orari">Lun–Ven 12:00–23:00 &nbsp;·&nbsp; Sab–Dom 12:00–24:00</div>
+  </div>
+</section>
 
-        <div class="col-md-6 order-md-1">
-            <div class="p-5 d-flex justify-content-center flex-column h-100">
-                <h2 class="display-5 fw-bold">Ingredienti freschi <span class="text-muted">e di stagione</span></h2>
-                <p class="lead">La qualità è la nostra priorità. Ogni mattina, i nostri chef scelgono personalmente i prodotti migliori, garantendo freschezza e sapore in ogni preparazione. Dalla terra al mare, portiamo in tavola l'eccellenza del territorio.</p>
-            </div>
-        </div> 
-        <div class="col-md-6 p-0">
-            <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?q=80&w=800" class="img-fluid" alt="Ingredienti freschi" loading="lazy">
-        </div>
-        <div class="col-md-6 ">
-            <div class="p-5 d-flex justify-content-center flex-column h-100">
-                <h2 class="display-5 fw-bold">Un ambiente <span class="text-muted">per ogni occasione</span></h2>
-                <p class="lead">Che sia una cena romantica, un pranzo di lavoro o una festa con amici, l'Osteria del Sud offre l'atmosfera perfetta. Le nostre sale accoglienti e la terrazza panoramica sono pronte ad ospitarvi per momenti indimenticabili.</p>
-            </div>
-        </div> 
-        <div class="col-md-6 p-0 order-md-2">
-            <img src="https://images.unsplash.com/photo-1559925393-8be0ec41b50d?q=80&w=800" class="img-fluid" alt="Tavoli esterni" loading="lazy">
-        </div>
+<!-- ── MAP ── -->
+<section class="map-sec">
+  <div class="map-bg" style="background-image: url('asset/immagini/map-bg.png');"></div>
+  <div class="map-overlay-card reveal">
+    <span class="map-card-label">Dove Siamo</span>
+    <h3 class="map-card-title"><em>Osteria</em> del Sud</h3>
+    <p class="map-card-address">Via Giuseppe Orsi 42<br>80128 Napoli (NA)</p>
+    <a href="https://maps.google.com/?q=Via+Giuseppe+Orsi+42,+80128+Napoli+NA" target="_blank" class="btn-outline" style="width:100%; text-align:center;">Apri in Google Maps</a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left;">
+    <div class="footer-col">
+      <div class="f-name">Osteria del Sud</div>
+      <div class="f-sub" style="margin-bottom: 1.5rem;">Cucina Napoletana · Napoli</div>
+      <p style="color: rgba(255,255,255,0.6); font-style: italic;">La differenza non è nel menù, è nell'atteggiamento. Lasciati consigliare.</p>
     </div>
-  </section>
-</main> 
-
-<!--  FOOTER  -->
-  <footer class="footer text-white py-5">
-    <div class="container py-4">
-        <div class="row row-col-2 row-col-md-3">
-            <div class="col">
-                <h3>Osteria del sud</h3>
-                <h6>Cucina casalinga, porzioni da re!</h6>
-                <p> 
-                    Via Giuseppe Orsi - 80100 NAPOLI 
-                    <br>
-                    <a class=" mt-2 icon-link icon-link-hover text-white text-decoration-none" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                          </svg>
-                        081-7758182
-                      </a> 
-                    </p>
-                </div>
-                  <div class="col">
-                    <h3>Orari</h3>
-                    <p class="fw-bold mb-1">Lunedi <span class="fw-lighter">Chiuso</span></p>
-                    <p class="fw-bold">Martedi a Domenica <span class="fw-lighter">17:00 - 02:00</span></p>
-                    
-                  </div>
-                 <div class="col">
-                    <h3>Navigazione</h3>
-                    <ul class="navbar-nav">
-                            <a class="nav-link" href="about.html"> Ristorante</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.html"> Menu</a>
-                        </li>
-                    </ul>
-
-                 </div>   
-        </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Navigazione</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ristorante.html">Il Ristorante</a></li>
+        <li><a href="menu.html">Il Menù</a></li>
+        <li><a href="#" onclick="document.getElementById('bookingModal').showModal(); return false;">Prenota</a></li>
+      </ul>
     </div>
-  </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper('.myHeroSwiper', {
-        loop: true,
-        autoplay: { delay: 5000 },
-        pagination: { el: '.swiper-pagination', clickable: true },
-        effect: 'fade',
-        fadeEffect: { crossFade: true }
-      });
-    </script>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Termini e Condizioni</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Contatti</div>
+      <p>Via Giuseppe Orsi 42<br>80128 Napoli (NA)</p>
+      <p style="margin-top: .8rem;">T. <a href="tel:+390810000000">+39 081 000 0000</a><br>E. <a href="mailto:info@osteriadelsud.it">info@osteriadelsud.it</a></p>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(245,237,214,.06); margin-top: 3rem; padding-top: 2rem; text-align: center; font-size: .75rem; color: rgba(245,237,214,.3);">
+    &copy; 2026 Osteria del Sud. Design: Concept Project.
+  </div>
+</footer>
+
+
+
+<!-- Scripts -->
+
+<!-- ── BOOKING MODAL ── -->
+<dialog id="bookingModal" class="booking-modal">
+  <div class="bm-inner">
+    <button class="bm-close" aria-label="Chiudi" onclick="document.getElementById('bookingModal').close(); document.getElementById('bmFormContainer').style.display='block'; document.getElementById('bmSuccess').style.display='none'; document.getElementById('bookingForm').reset();">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <div id="bmFormContainer">
+      <h2 class="bm-title">Il tuo Tavolo</h2>
+      <span class="bm-sub">Prenotazione Online</span>
+
+      <form class="bm-form" id="bookingForm" onsubmit="event.preventDefault(); document.getElementById('bmFormContainer').style.display='none'; document.getElementById('bmSuccess').style.display='block';">
+        <div class="bm-row">
+          <div class="bm-field">
+            <label for="bDate">Data</label>
+            <input type="date" id="bDate" class="bm-input" required>
+          </div>
+          <div class="bm-field">
+            <label for="bTime">Ora</label>
+            <select id="bTime" class="bm-select" required>
+              <option value="" disabled selected>Seleziona orario</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bGuests">Ospiti</label>
+          <input type="number" id="bGuests" class="bm-input" min="1" max="12" value="2" required>
+        </div>
+
+        <div class="bm-field">
+          <label>Preferenza Tavolo (Opzionale)</label>
+          <div class="bm-radio-group">
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="indifferente" checked>
+              <span>Indifferente (lascia fare all'oste)</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="finestra">
+              <span>Vicino alla finestra</span>
+            </label>
+            <label class="bm-radio">
+              <input type="radio" name="bTable" value="esterno">
+              <span>Tavolo all'esterno (dehors)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label>Esigenze Alimentari</label>
+          <div class="bm-checkboxes">
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegetariano">
+              <span>Vegetariano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="vegano">
+              <span>Vegano</span>
+            </label>
+            <label class="bm-check">
+              <input type="checkbox" name="bDiet" value="celiachia">
+              <span>Senza Glutine</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bNotes">Note o Allergie</label>
+          <textarea id="bNotes" class="bm-textarea" placeholder="Segnala eventuali allergie o richieste speciali..."></textarea>
+        </div>
+
+        <div class="bm-submit">
+          <button type="submit" class="btn-tc"><span>Conferma Prenotazione</span></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="bmSuccess" class="bm-success">
+      <svg class="bm-success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <h3 class="bm-success-title">Tavolo Riservato.</h3>
+      <p class="bm-success-text">Ti aspettiamo all'Osteria del Sud.<br>A breve riceverai una conferma via email.</p>
+    </div>
+
+  </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="asset/js/main.js"></script>
+
 </body>
 </html>
