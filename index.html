@@ -557,6 +557,22 @@
       <form class="bm-form" id="bookingForm" onsubmit="event.preventDefault(); document.getElementById('bmFormContainer').style.display='none'; document.getElementById('bmSuccess').style.display='block';">
         <div class="bm-row">
           <div class="bm-field">
+            <label for="bName">Nome</label>
+            <input type="text" id="bName" class="bm-input" placeholder="Mario" required>
+          </div>
+          <div class="bm-field">
+            <label for="bSurname">Cognome</label>
+            <input type="text" id="bSurname" class="bm-input" placeholder="Rossi" required>
+          </div>
+        </div>
+
+        <div class="bm-field">
+          <label for="bPhone">Numero di Telefono</label>
+          <input type="tel" id="bPhone" class="bm-input" placeholder="+39 333 000 0000" required>
+        </div>
+
+        <div class="bm-row">
+          <div class="bm-field">
             <label for="bDate">Data</label>
             <input type="date" id="bDate" class="bm-input" required>
           </div>
