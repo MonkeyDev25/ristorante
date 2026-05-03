@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il Menù — Osteria del Sud</title>
+  <meta name="description" content="Il menù dell'Osteria del Sud: primi piatti, secondi, dolci e vini della tradizione campana. Il menù cambia con la stagione.">
 
+  <!-- Fonts (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap"></noscript>
+
+  <!-- Swiper CSS (non-render-blocking) -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
   <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
@@ -71,7 +78,7 @@
           <div class="piatto-img-wrap">
             <picture>
               <source type="image/webp" srcset="asset/immagini/paccheri-allo-scoglio-800x800.webp">
-              <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Spaghetti alle Vongole">
+              <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Spaghetti alle Vongole" loading="lazy">
             </picture>
           </div>
           <div class="piatto-info">
@@ -87,7 +94,7 @@
           <div class="piatto-img-wrap">
             <picture>
               <source type="image/webp" srcset="asset/immagini/pasta-alla-norma-800x800.webp">
-              <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Paccheri al Ragù">
+              <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Paccheri al Ragù" loading="lazy">
             </picture>
           </div>
           <div class="piatto-info">
@@ -103,7 +110,7 @@
           <div class="piatto-img-wrap">
             <picture>
               <source type="image/webp" srcset="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp">
-              <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Scialatielli ai Frutti di Mare">
+              <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Scialatielli ai Frutti di Mare" loading="lazy">
             </picture>
           </div>
           <div class="piatto-info">
@@ -125,7 +132,7 @@
               <div class="piatto-card">
                 <div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/paccheri-allo-scoglio-800x800.webp">
-              <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Paccheri allo scoglio">
+              <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Paccheri allo scoglio" loading="lazy">
             </picture></div>
                 <div class="piatto-card-body">
                   <div class="piatto-card-name">Paccheri allo scoglio</div>
@@ -138,7 +145,7 @@
               <div class="piatto-card">
                 <div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/pasta-alla-norma-800x800.webp">
-              <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Pasta alla Norma">
+              <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Pasta alla Norma" loading="lazy">
             </picture></div>
                 <div class="piatto-card-body">
                   <div class="piatto-card-name">Pasta alla Norma</div>
@@ -151,7 +158,7 @@
               <div class="piatto-card">
                 <div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp">
-              <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Orecchiette">
+              <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Orecchiette" loading="lazy">
             </picture></div>
                 <div class="piatto-card-body">
                   <div class="piatto-card-name">Orecchiette con cime di rapa</div>
@@ -177,7 +184,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/baccala-alla-napoletana-800x800.webp">
-              <img src="asset/immagini/baccala-alla-napoletana-800x800.jpg" alt="Baccalà">
+              <img src="asset/immagini/baccala-alla-napoletana-800x800.jpg" alt="Baccalà" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Baccalà alla Napoletana</div>
@@ -189,7 +196,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-              <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello">
+              <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Agnello Scottadito</div>
@@ -201,7 +208,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/pesce-piatto-800x800.webp">
-              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Frittura">
+              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Frittura" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Frittura di Paranza</div>
@@ -213,7 +220,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-              <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato">
+              <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Brasato di Agnello</div>
@@ -229,19 +236,19 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/pesce-piatto-800x800.webp">
-              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Baccalà">
+              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Baccalà" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Baccalà alla Napoletana</div><div class="piatto-card-desc">San Marzano, olive di Gaeta, capperi di Pantelleria</div><div class="piatto-card-price">€ 20</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-              <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello">
+              <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Agnello Scottadito</div><div class="piatto-card-desc">Costolette d'agnello alla brace, erbe aromatiche</div><div class="piatto-card-price">€ 22</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/pesce-piatto-800x800.webp">
-              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Paranza">
+              <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Paranza" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Frittura di Paranza</div><div class="piatto-card-desc">Pesce misto di giornata, semola rimacinata, limone</div><div class="piatto-card-price">€ 24</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-              <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato">
+              <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Brasato di Agnello</div><div class="piatto-card-desc">Cottura lenta nel vino rosso Aglianico, sedano rapa</div><div class="piatto-card-price">€ 19</div></div></div></div>
           </div>
           <div class="swiper-pagination"></div>
@@ -260,7 +267,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/pastiera-800x800.webp">
-              <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera">
+              <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Pastiera Napoletana</div>
@@ -272,7 +279,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/babba-napoletano-800x800.webp">
-              <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà">
+              <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Babà al Rum</div>
@@ -284,7 +291,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/sfogliatella-800x800.webp">
-              <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella">
+              <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Sfogliatella Riccia</div>
@@ -296,7 +303,7 @@
         <div class="piatto-row reveal">
           <div class="piatto-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/struffoli-800x800.webp">
-              <img src="asset/immagini/800x800.jpg" alt="Struffoli">
+              <img src="asset/immagini/800x800.jpg" alt="Struffoli" loading="lazy">
             </picture></div>
           <div class="piatto-info">
             <div class="piatto-name">Struffoli</div>
@@ -312,19 +319,19 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/pastiera-800x800.webp">
-              <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera">
+              <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Pastiera Napoletana</div><div class="piatto-card-desc">Grano cotto, ricotta di pecora, acqua di fiori d'arancio</div><div class="piatto-card-price">€ 7</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/babba-napoletano-800x800.webp">
-              <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà">
+              <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Babà al Rum</div><div class="piatto-card-desc">Rum giamaicano invecchiato, chantilly, amarena</div><div class="piatto-card-price">€ 6</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/sfogliatella-800x800.webp">
-              <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella">
+              <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Sfogliatella Riccia</div><div class="piatto-card-desc">Ricotta, semolino, cedro candito, cannella</div><div class="piatto-card-price">€ 4</div></div></div></div>
             <div class="swiper-slide"><div class="piatto-card"><div class="piatto-card-img"><picture>
               <source type="image/webp" srcset="asset/immagini/struffoli-800x800.webp">
-              <img src="asset/immagini/struffoli-800x800.jpg" alt="Struffoli">
+              <img src="asset/immagini/struffoli-800x800.jpg" alt="Struffoli" loading="lazy">
             </picture></div><div class="piatto-card-body"><div class="piatto-card-name">Struffoli</div><div class="piatto-card-desc">Miele millefiori, confettini, scorze d'arancia</div><div class="piatto-card-price">€ 8</div></div></div></div>
           </div>
           <div class="swiper-pagination"></div>
@@ -343,7 +350,7 @@
         <div class="vino-row reveal">
           <div class="vino-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Greco di Tufo">
+              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Greco di Tufo" loading="lazy">
             </picture></div>
           <div class="vino-info">
             <div class="vino-name">Greco di Tufo DOCG</div>
@@ -354,7 +361,7 @@
         <div class="vino-row reveal" style="transition-delay:.1s">
           <div class="vino-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Aglianico">
+              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Aglianico" loading="lazy">
             </picture></div>
           <div class="vino-info">
             <div class="vino-name">Aglianico del Taburno</div>
@@ -365,7 +372,7 @@
         <div class="vino-row reveal" style="transition-delay:.15s">
           <div class="vino-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Fiano">
+              <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Fiano" loading="lazy">
             </picture></div>
           <div class="vino-info">
             <div class="vino-name">Fiano di Avellino DOCG</div>
@@ -376,7 +383,7 @@
         <div class="vino-row reveal" style="transition-delay:.2s">
           <div class="vino-img-wrap"><picture>
               <source type="image/webp" srcset="asset/immagini/primitivo-vino-800x800.webp">
-              <img src="asset/immagini/primitivo-1-800x800.jpg" alt="Primitivo">
+              <img src="asset/immagini/primitivo-1-800x800.jpg" alt="Primitivo" loading="lazy">
             </picture></div>
           <div class="vino-info">
             <div class="vino-name">Primitivo del Salento</div>
@@ -544,9 +551,9 @@
   </div>
 </dialog>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="asset/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="asset/js/main.js" defer></script>
 </body>
 </html>

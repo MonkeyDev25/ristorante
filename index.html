@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osteria del Sud — Cucina Napoletana</title>
+  <meta name="description" content="Osteria del Sud, cucina napoletana autentica nel cuore di Napoli. Prenota il tuo tavolo e scopri i sapori della tradizione: pasta fresca, pesce, dolci partenopei.">
 
-  <!-- Fonts -->
+  <!-- Preload immagine hero (LCP) -->
+  <link rel="preload" as="image" href="asset/immagini/hero-800x450-sm-mobile.webp" media="(max-width: 767px)" type="image/webp">
+  <link rel="preload" as="image" href="asset/immagini/hero%201280x720-md-tablet.webp" media="(min-width: 768px) and (max-width: 1279px)" type="image/webp">
+
+  <!-- Fonts (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap"></noscript>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Swiper CSS (non-render-blocking) -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
   <!-- Stile progetto -->
   <link rel="stylesheet" href="asset/css/style.css">
@@ -131,7 +138,7 @@
         <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.webp" type="image/webp">
         <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.jpg">
         <source media="(min-width: 800px)" srcset="asset/immagini/filosofia-1200x1500-lg-desktop.webp" type="image/webp">
-        <img src="asset/immagini/filosofia-1200x1500-lg-desktop.jpg" alt="Cucina Osteria del Sud" class="filo-ph-inner">
+        <img src="asset/immagini/filosofia-1200x1500-lg-desktop.jpg" alt="Cucina Osteria del Sud" class="filo-ph-inner" loading="lazy">
       </picture>
     </div>
 
@@ -170,7 +177,7 @@
         <source media="(max-width: 767px)" srcset="asset/immagini/ziti-lardiati-600x600.webp" type="image/webp">
         <source media="(max-width: 767px)" srcset="asset/immagini/ziti-lardiati-600x600.jpg">
         <source type="image/webp" srcset="asset/immagini/ziti-lardiati-1200x1200.webp">
-        <img src="asset/immagini/ziti-lardiati-1200x1200.jpg" alt="Il piatto dell'oste">
+        <img src="asset/immagini/ziti-lardiati-1200x1200.jpg" alt="Il piatto dell'oste" loading="lazy">
       </picture>
     </div>
     <div class="oste-text reveal" style="transition-delay:.15s">
@@ -209,7 +216,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/paccheri-allo-scoglio-800x800.webp">
-            <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Paccheri allo scoglio" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Paccheri allo scoglio" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Paccheri allo scoglio</div>
@@ -220,7 +227,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/pasta-alla-norma-800x800.webp">
-            <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Pasta alla Norma" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Pasta alla Norma" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Pasta alla Norma</div>
@@ -231,7 +238,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp">
-            <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Orecchiette con cime di rapa" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Orecchiette con cime di rapa" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Orecchiette con cime di rapa</div>
@@ -246,7 +253,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/baccala-alla-napoletana-800x800.webp">
-            <img src="asset/immagini/baccala-alla-napoletana-800x800.jpg" alt="Baccalà alla Napoletana" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/baccala-alla-napoletana-800x800.jpg" alt="Baccalà alla Napoletana" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Baccalà alla Napoletana</div>
@@ -257,7 +264,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-            <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello Scottadito" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello Scottadito" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Agnello Scottadito</div>
@@ -268,7 +275,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/pesce-piatto-800x800.webp">
-            <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Frittura di Paranza" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Frittura di Paranza" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Frittura di Paranza</div>
@@ -279,7 +286,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
-            <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato di Agnello" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato di Agnello" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Brasato di Agnello</div>
@@ -294,7 +301,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/pastiera-800x800.webp">
-            <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera Napoletana" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera Napoletana" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Pastiera Napoletana</div>
@@ -305,7 +312,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/babba-napoletano-800x800.webp">
-            <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà al Rum" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà al Rum" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Babà al Rum</div>
@@ -316,7 +323,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/sfogliatella-800x800.webp">
-            <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella Riccia" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella Riccia" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Sfogliatella Riccia</div>
@@ -327,7 +334,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/struffoli-800x800.webp">
-            <img src="asset/immagini/800x800.jpg" alt="Struffoli" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/800x800.jpg" alt="Struffoli" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Struffoli</div>
@@ -342,7 +349,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Greco di Tufo DOCG" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Greco di Tufo DOCG" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Greco di Tufo DOCG</div>
@@ -353,7 +360,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Aglianico del Taburno" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Aglianico del Taburno" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Aglianico del Taburno</div>
@@ -364,7 +371,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
-            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Fiano di Avellino DOCG" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Fiano di Avellino DOCG" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Fiano di Avellino DOCG</div>
@@ -375,7 +382,7 @@
         <div class="mi">
           <picture>
             <source type="image/webp" srcset="asset/immagini/primitivo-vino-800x800.webp">
-            <img src="asset/immagini/primitivo-1-800x800.jpg" alt="Primitivo del Salento" class="mi-img" width="68" height="68">
+            <img src="asset/immagini/primitivo-1-800x800.jpg" alt="Primitivo del Salento" class="mi-img" width="68" height="68" loading="lazy">
           </picture>
           <div class="mi-left">
             <div class="mi-name">Primitivo del Salento</div>
@@ -404,7 +411,7 @@
             <source media="(max-width: 767px)" srcset="asset/immagini/sala-interna-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/sala-interna-600x800.jpg">
             <source type="image/webp" srcset="asset/immagini/sala-interna-1200x1600.webp">
-            <img src="asset/immagini/sala-interna-1200x1600.jpg" alt="Sala Principale · Sera">
+            <img src="asset/immagini/sala-interna-1200x1600.jpg" alt="Sala Principale · Sera" loading="lazy">
           </picture>
           <span class="g-cap">Sala Principale · Sera</span>
         </div>
@@ -415,7 +422,7 @@
             <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
             <source type="image/webp" srcset="asset/immagini/cucina-1200x1600.webp">
-            <img src="asset/immagini/cucina-1200x1600.jpg" alt="Cucina · Preparazione">
+            <img src="asset/immagini/cucina-1200x1600.jpg" alt="Cucina · Preparazione" loading="lazy">
           </picture>
           <span class="g-cap">Cucina · Preparazione</span>
         </div>
@@ -426,7 +433,7 @@
             <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
             <source type="image/webp" srcset="asset/immagini/vino-della-casa-1200x1600.webp">
-            <img src="asset/immagini/vino-della-casa-1200x1600.jpg" alt="Cantina · Selezione Vini">
+            <img src="asset/immagini/vino-della-casa-1200x1600.jpg" alt="Cantina · Selezione Vini" loading="lazy">
           </picture>
           <span class="g-cap">Cantina · Selezione Vini</span>
         </div>
@@ -437,7 +444,7 @@
             <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
             <source type="image/webp" srcset="asset/immagini/convivio-1200x1600.webp">
-            <img src="asset/immagini/convivio-1200x1600.jpg" alt="Tavolo · Convivio">
+            <img src="asset/immagini/convivio-1200x1600.jpg" alt="Tavolo · Convivio" loading="lazy">
           </picture>
           <span class="g-cap">Tavolo · Convivio</span>
         </div>
@@ -448,7 +455,7 @@
             <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
             <source type="image/webp" srcset="asset/immagini/tavolo-imbandito-1200x1600.webp">
-            <img src="asset/immagini/tavolo-imbandito-1200x1600.jpg" alt="Tavolo · Imbandito">
+            <img src="asset/immagini/tavolo-imbandito-1200x1600.jpg" alt="Tavolo · Imbandito" loading="lazy">
           </picture>
           <span class="g-cap">Tavolo · Imbandito</span>
         </div>
@@ -484,7 +491,7 @@
             srcset="asset/immagini/map-bg-1920x500.webp">
     <img src="asset/immagini/map-bg-1920x500.jpg"
          alt="Mappa Napoli — Osteria del Sud"
-        >
+         loading="lazy">
   </picture>
   <div class="map-overlay-card reveal">
     <span class="map-card-label">Dove Siamo</span>
@@ -633,10 +640,10 @@
   </div>
 </dialog>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="asset/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="asset/js/main.js" defer></script>
 
 </body>
 </html>
