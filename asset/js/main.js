@@ -18,7 +18,7 @@ gsap.from('#heroContent > *, .page-hero-content > *', {
 
 // Scroll reveals
 gsap.utils.toArray('.reveal').forEach(el => {
-  const cssDelay = parseFloat(el.style.transitionDelay) || 0;
+  const cssDelay = parseFloat(el.dataset.delay) || 0;
   
   // Disabilita temporaneamente le transizioni CSS per evitare "scatti" dovuti al conflitto tra GSAP e transition:all
   el.style.transition = 'none';

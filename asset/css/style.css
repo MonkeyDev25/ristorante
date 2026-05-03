@@ -127,6 +127,7 @@ body::after {
   color: rgba(245,237,214,.6); text-decoration: none; transition: color .2s;
 }
 .nav-links a:hover { color: var(--tc); }
+.nav-links a.is-current { color: var(--ivory); }
 
 .nav-cta {
   font-family: 'Space Mono', monospace;
@@ -449,7 +450,11 @@ body::after {
   color: rgba(245,237,214,.75); line-height: 2.1;
   margin-bottom: 3rem;
 }
-.filo-ph { aspect-ratio: 4/5; }
+.filo-ph {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  position: relative;
+}
 .filo-list { list-style: none; }
 .filo-list li {
   display: flex; gap: 1.6rem; align-items: flex-start;
@@ -671,7 +676,6 @@ body::after {
     linear-gradient(160deg, #1e1208 0%, #2d1a0e 55%, #1a0e05 100%);
   border: 1px solid rgba(245,237,214,.05);
   position: relative;
-  display: flex; align-items: flex-end; padding: 1rem;
   overflow: hidden;
 }
 .g-img picture,
@@ -686,9 +690,13 @@ body::after {
 .g-slide:hover .g-img img { transform: scale(1.04); }
 .g-img img { transition: transform 0.7s ease; }
 .g-cap {
-  position: relative; z-index: 2;
+  position: absolute; bottom: 1rem; left: 1rem; z-index: 2;
   font-family: 'Space Mono', monospace; font-size: .44rem;
-  color: rgba(245,237,214,.18); letter-spacing: .16em; text-transform: uppercase;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(245,237,214,.5);
+  background: rgba(17,13,6,.55);
+  padding: .3rem .6rem;
+  backdrop-filter: blur(4px);
 }
 
 /* ══════════════════════
@@ -741,6 +749,7 @@ body::after {
   letter-spacing: .24em; text-transform: uppercase;
   color: rgba(245,237,214,.7);
 }
+.cta-inner .btn-tc { margin: 2rem 0; }
 
 /* ══════════════════════
    FOOTER
@@ -752,17 +761,12 @@ footer {
 }
 .footer-inner {
   display: grid;
-  grid-template-columns: 1fr; /* mobile: stacked */
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
 }
 @media (max-width: 600px) {
   .footer-inner { text-align: center; justify-items: center; }
   .footer-col ul { display: flex; flex-direction: column; align-items: center; }
-}
-@media (min-width: 600px) {
-  .footer-inner { grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
-  .f-center { text-align: center; }
-  .f-right { text-align: right; }
 }
 .f-name {
   font-family: 'Cormorant Garamond', serif;
@@ -773,6 +777,7 @@ footer {
   font-family: 'Space Mono', monospace; font-size: .48rem;
   letter-spacing: .22em; text-transform: uppercase;
   color: rgba(245,237,214,.18);
+  margin-bottom: 1.5rem;
 }
 .footer-col-title {
   font-family: 'Space Mono', monospace;
@@ -787,10 +792,29 @@ footer {
   font-size: .85rem;
   transition: all .2s;
 }
-.footer-col ul a:hover, .footer-col p a:hover { 
+.footer-col ul a:hover, .footer-col p a:hover {
   color: var(--tc);
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+/* Tagline nel primo footer-col */
+.footer-col:first-child p {
+  color: rgba(245,237,214,.6);
+  font-style: italic;
+}
+
+/* Spaziatura tra paragrafi nei footer-col (es. contatti) */
+.footer-col p + p { margin-top: .8rem; }
+
+/* Copyright bar */
+.footer-copyright {
+  border-top: 1px solid rgba(245,237,214,.06);
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: .75rem;
+  color: rgba(245,237,214,.3);
 }
 
 /* ══════════════════════
@@ -859,6 +883,11 @@ footer {
   font-size: .88rem; font-weight: 300;
   color: rgba(245,237,214,.85); line-height: 1.8;
   margin-bottom: 2rem;
+}
+.map-overlay-card .btn-outline {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 /* ══════════════════════
@@ -1035,7 +1064,7 @@ img.mi-img {
       transition: transform .5s ease, filter .5s;
     }
     .piatto-row:hover .piatto-img-wrap img { transform: scale(1.06); filter: sepia(0); }
-    .piatto-info {}
+    /*.piatto-info {}*/
     .piatto-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.3rem, 2vw, 1.65rem);
@@ -1212,7 +1241,7 @@ img.mi-img {
       padding: .3rem .6rem;
       backdrop-filter: blur(4px);
     }
-    .storia-text {}
+    /*.storia-text {}*/
     .storia-intro {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.3rem, 2.5vw, 1.8rem);
@@ -1437,7 +1466,7 @@ img.mi-img {
   padding: .5rem 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,.3);
 }
-.oste-text { }
+/*.oste-text { }*/
 .oste-label {
   font-family: 'Space Mono', monospace;
   font-size: .5rem; letter-spacing: .28em; text-transform: uppercase;
