@@ -22,6 +22,9 @@
 <nav class="nav" id="mainNav">
   <a href="#" class="nav-logo">Osteria del Sud</a>
   <div class="nav-coords"></div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="ristorante.html">Il Ristorante</a></li>
     <li><a href="menu.html">Il Menù</a></li>
@@ -163,7 +166,12 @@
   <div class="oste-inner">
     <div class="oste-img-wrap reveal">
       <div class="oste-badge">Specialità di Oggi</div>
-      <img decoding="async" src="asset/immagini/pasta-alla-norma-800x800.webp" alt="Il piatto dell'oste" loading="lazy">
+      <picture>
+        <source media="(max-width: 767px)" srcset="asset/immagini/ziti-lardiati-600x600.webp" type="image/webp">
+        <source media="(max-width: 767px)" srcset="asset/immagini/ziti-lardiati-600x600.jpg">
+        <source type="image/webp" srcset="asset/immagini/ziti-lardiati-1200x1200.webp">
+        <img decoding="async" src="asset/immagini/ziti-lardiati-1200x1200.jpg" alt="Il piatto dell'oste" loading="lazy">
+      </picture>
     </div>
     <div class="oste-text reveal" style="transition-delay:.15s">
       <span class="oste-label">Il piatto dell'oste</span>
@@ -199,123 +207,131 @@
       <!-- PRIMI -->
       <div class="menu-pane active" id="pane-primi">
         <div class="mi">
-          <img
-  src="asset/immagini/paccheri-allo-scoglio-800x800.webp"
-  alt="paccheri allo scoglio"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/paccheri-allo-scoglio-800x800.webp">
+            <img src="asset/immagini/paccheri-allo-scoglio-800x800.jpg" alt="Paccheri allo scoglio" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
             <div class="mi-name">Paccheri allo scoglio</div>
-            <div class="mi-desc">paccheri freschi, cozze, vongole, scampi, gamberi, calamari, pomodorino del Piennolo</div>
+            <div class="mi-desc">Molluschi misti, pomodorini, aglio, prezzemolo fresco</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 18</div>
         </div>
         <div class="mi">
-          <img
-  src="asset/immagini/pasta-alla-norma-800x800.webp"
-  alt="pasta alla norma"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/pasta-alla-norma-800x800.webp">
+            <img src="asset/immagini/pasta-alla-norma-800x800.jpg" alt="Pasta alla Norma" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
             <div class="mi-name">Pasta alla Norma</div>
-            <div class="mi-desc">maccheroni al ferretto, melanzane, pomodoro fresco, ricotta salata stagionata</div>
+            <div class="mi-desc">Ricotta salata stagionata, melanzane fritte, pomodorini</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 16</div>
         </div>
         <div class="mi">
-          <img
-  src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp"
-  alt="orecchiette con cime di rapa"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/orecchiette-con-cime-di-rapa-800x800.webp">
+            <img src="asset/immagini/orecchiette-con-cime-di-rapa-800x800.jpg" alt="Orecchiette con cime di rapa" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
             <div class="mi-name">Orecchiette con cime di rapa</div>
-            <div class="mi-desc">orecchiette fatte in casa, cime di rapa, aglio, olio extra vergine d'oliva, peperoncino</div>
+            <div class="mi-desc">Cime di rapa, acciughe, aglio, olio extra vergine</div>
           </div>
-          <div class="mi-dots"></div><div class="mi-price">€ 22</div>
+          <div class="mi-dots"></div><div class="mi-price">€ 15</div>
         </div>
-       
       </div>
 
       <!-- SECONDI -->
       <div class="menu-pane" id="pane-secondi">
         <div class="mi">
-          <img
-  src="asset/immagini/agnello-800x800.webp"
-  alt="agnello"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/baccala-alla-napoletana-800x800.webp">
+            <img src="asset/immagini/baccala-alla-napoletana-800x800.jpg" alt="Baccalà alla Napoletana" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
-            <div class="mi-name">Agnello</div>
-            <div class="mi-desc">costolette d'agnello, patate, rosmarino, aglio, olio extra vergine d'oliva</div>
+            <div class="mi-name">Baccalà alla Napoletana</div>
+            <div class="mi-desc">Pomodoro San Marzano, olive di Gaeta, capperi di Pantelleria</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 20</div>
         </div>
         <div class="mi">
-          <img
-  src="asset/immagini/pesce-piatto-800x800.jpg"
-  alt="pesce del giorno"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
+            <img src="asset/immagini/agnello--800x800.jpg" alt="Agnello Scottadito" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
-            <div class="mi-name">Pesce del giorno</div>
-            <div class="mi-desc">pesce fresco di giornata, cotto alla brace o al forno</div>
+            <div class="mi-name">Agnello Scottadito</div>
+            <div class="mi-desc">Costolette d'agnello alla brace, erbe aromatiche, patate novelle</div>
           </div>
-          <div class="mi-dots"></div><div class="mi-price">€ 20</div>
+          <div class="mi-dots"></div><div class="mi-price">€ 22</div>
         </div>
-         <div class="mi">
-          <img
-  src="asset/immagini/fave-e-cicoria-piatto800x800.webp"
-  alt="fave e cicoria"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/pesce-piatto-800x800.webp">
+            <img src="asset/immagini/pesce-piatto-800x800.jpg" alt="Frittura di Paranza" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
-            <div class="mi-name">Fave e Cicoria</div>
-            <div class="mi-desc">fave e cicoria di Pantelleria</div>
+            <div class="mi-name">Frittura di Paranza</div>
+            <div class="mi-desc">Pesce misto di giornata, semola rimacinata di grano duro, limone di Amalfi</div>
           </div>
-          <div class="mi-dots"></div><div class="mi-price">€ 12</div>
+          <div class="mi-dots"></div><div class="mi-price">€ 24</div>
+        </div>
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/agnello-800x800.webp">
+            <img src="asset/immagini/agnello--800x800.jpg" alt="Brasato di Agnello" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
+          <div class="mi-left">
+            <div class="mi-name">Brasato di Agnello</div>
+            <div class="mi-desc">Cottura lenta nel vino rosso Aglianico, sedano rapa, bacche di ginepro</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 19</div>
         </div>
       </div>
 
       <!-- DOLCI -->
       <div class="menu-pane" id="pane-dolci">
         <div class="mi">
-          <img
-  src="asset/immagini/pastiera-800x800.webp"
-  alt="pastiera napoletana"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/pastiera-800x800.webp">
+            <img src="asset/immagini/pastiera-800x800.jpg" alt="Pastiera Napoletana" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
             <div class="mi-name">Pastiera Napoletana</div>
-            <div class="mi-desc">grano cotto, ricotta di pecora, acqua di fiori d'arancio</div>
+            <div class="mi-desc">Grano cotto, ricotta di pecora, acqua di fiori d'arancio</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 7</div>
         </div>
         <div class="mi">
-          <img
-  src="asset/immagini/pastiera-800x800.webp"
-  alt="struffoli"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/babba-napoletano-800x800.webp">
+            <img src="asset/immagini/babba-napoletano-800x800.jpg" alt="Babà al Rum" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
+          <div class="mi-left">
+            <div class="mi-name">Babà al Rum</div>
+            <div class="mi-desc">Rum giamaicano invecchiato, panna chantilly, amarena di Cantiano</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 6</div>
+        </div>
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/sfogliatella-800x800.webp">
+            <img src="asset/immagini/sfogliatella-800x800.jpg" alt="Sfogliatella Riccia" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
+          <div class="mi-left">
+            <div class="mi-name">Sfogliatella Riccia</div>
+            <div class="mi-desc">Ricotta fresca, semolino, cedro candito, cannella — servita tiepida</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 4</div>
+        </div>
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/struffoli-800x800.webp">
+            <img src="asset/immagini/800x800.jpg" alt="Struffoli" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
             <div class="mi-name">Struffoli</div>
-            <div class="mi-desc">miele millefiori, confettini, scorze d'arancia</div>
+            <div class="mi-desc">Miele millefiori campano, confettini colorati, scorze di arancia e limone</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 8</div>
         </div>
@@ -324,34 +340,49 @@
       <!-- VINI -->
       <div class="menu-pane" id="pane-vini">
         <div class="mi">
-          <img
-  src="asset/immagini/aglianico-vino-800x800.webp"
-  alt="aglianico"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Greco di Tufo DOCG" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
-            <div class="mi-name">Falanghina DOCG</div>
-            <div class="mi-desc">Cantine del Vesuvio · 2020</div>
+            <div class="mi-name">Greco di Tufo DOCG</div>
+            <div class="mi-desc">Feudi di San Gregorio · Irpinia · 2022</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 28</div>
         </div>
         <div class="mi">
-          <img
-  src="asset/immagini/primitivo-vino-800x800.webp"
-  alt="primitivo di manduria"
-  class="mi-img"
-  width="68" height="68"
-  loading="lazy"
->
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Aglianico del Taburno" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
           <div class="mi-left">
-            <div class="mi-name">Primitivo di Manduria</div>
-            <div class="mi-desc">Torrevento · Puglia · 2023</div>
+            <div class="mi-name">Aglianico del Taburno</div>
+            <div class="mi-desc">Fontanavecchia · Sannio · 2019</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 32</div>
+        </div>
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/aglianico-vino-800x800.webp">
+            <img src="asset/immagini/aglianico-vino-800x800.jpg" alt="Fiano di Avellino DOCG" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
+          <div class="mi-left">
+            <div class="mi-name">Fiano di Avellino DOCG</div>
+            <div class="mi-desc">Mastroberardino · Irpinia · 2021</div>
+          </div>
+          <div class="mi-dots"></div><div class="mi-price">€ 30</div>
+        </div>
+        <div class="mi">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/primitivo-vino-800x800.webp">
+            <img src="asset/immagini/primitivo-1-800x800.jpg" alt="Primitivo del Salento" class="mi-img" width="68" height="68" loading="lazy">
+          </picture>
+          <div class="mi-left">
+            <div class="mi-name">Primitivo del Salento</div>
+            <div class="mi-desc">Notte Rossa · 2021</div>
           </div>
           <div class="mi-dots"></div><div class="mi-price">€ 25</div>
         </div>
-       
       </div>
 
     </div>
@@ -368,37 +399,57 @@
   <div class="swiper swiper-gallery">
     <div class="swiper-wrapper">
       <div class="swiper-slide g-slide">
-        <picture>
-  <img decoding="async" src="asset/immagini/sala-interna-600x800.jpg" alt="Sala Principale · Sera" class="g-img" loading="lazy">
-</picture>
+        <div class="g-img">
+          <picture>
+            <source type="image/webp" srcset="asset/immagini/sala-interna-600x800.jpg"> <!-- Fallback to JPG since no WebP exists -->
+            <img decoding="async" src="asset/immagini/sala-interna-600x800.jpg" alt="Sala Principale · Sera" loading="lazy">
+          </picture>
+          <span class="g-cap">Sala Principale · Sera</span>
+        </div>
       </div>
       <div class="swiper-slide g-slide">
-        <picture>
-  <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
-  <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
-  <img decoding="async" src="asset/immagini/cucina-1200x1600.webp" alt="Cucina · Preparazione" class="g-img" loading="lazy">
-</picture>
+        <div class="g-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
+            <source type="image/webp" srcset="asset/immagini/cucina-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/cucina-1200x1600.jpg" alt="Cucina · Preparazione" loading="lazy">
+          </picture>
+          <span class="g-cap">Cucina · Preparazione</span>
+        </div>
       </div>
       <div class="swiper-slide g-slide">
-        <picture>
-  <source media="(max-width: 767px)" srcset="asset/immagini/vino%20della%20casa%20600x800.webp" type="image/webp">
-  <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
-  <img decoding="async" src="asset/immagini/vino%20della%20casa%201200x1600.webp" alt="Cantina · Selezione Vini" class="g-img" loading="lazy">
-</picture>
+        <div class="g-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
+            <source type="image/webp" srcset="asset/immagini/vino-della-casa-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/vino-della-casa-1200x1600.jpg" alt="Cantina · Selezione Vini" loading="lazy">
+          </picture>
+          <span class="g-cap">Cantina · Selezione Vini</span>
+        </div>
       </div>
       <div class="swiper-slide g-slide">
-        <picture>
-  <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
-  <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
-  <img decoding="async" src="asset/immagini/convivio-1200x1600.webp" alt="Tavolo · Convivio" class="g-img" loading="lazy">
-</picture>
+        <div class="g-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
+            <source type="image/webp" srcset="asset/immagini/convivio-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/convivio-1200x1600.jpg" alt="Tavolo · Convivio" loading="lazy">
+          </picture>
+          <span class="g-cap">Tavolo · Convivio</span>
+        </div>
       </div>
       <div class="swiper-slide g-slide">
-        <picture>
-  <source media="(max-width: 767px)" srcset="asset/immagini/tavolo%20imbandito-600x800.webp" type="image/webp">
-  <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
-  <img decoding="async" src="asset/immagini/tavolo%20imbandito-1200x1600.webp" alt="Tavolo · Imbandito" class="g-img" loading="lazy">
-</picture>
+        <div class="g-img">
+          <picture>
+            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
+            <source type="image/webp" srcset="asset/immagini/tavolo-imbandito-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/tavolo-imbandito-1200x1600.jpg" alt="Tavolo · Imbandito" loading="lazy">
+          </picture>
+          <span class="g-cap">Tavolo · Imbandito</span>
+        </div>
       </div>
     </div>
   </div>
@@ -418,7 +469,21 @@
 
 <!-- ── MAP ── -->
 <section class="map-sec">
-  <div class="map-bg" style="background-image: url('asset/immagini/map-bg.png');"></div>
+  <picture class="map-bg">
+    <source media="(max-width: 767px)"
+            srcset="asset/immagini/map-bg-800x400.webp" type="image/webp">
+    <source media="(max-width: 767px)"
+            srcset="asset/immagini/map-bg-800x400.jpg">
+    <source media="(max-width: 1279px)"
+            srcset="asset/immagini/map-bg-1280x400.webp" type="image/webp">
+    <source media="(max-width: 1279px)"
+            srcset="asset/immagini/map-bg-1280x400.jpg">
+    <source type="image/webp"
+            srcset="asset/immagini/map-bg-1920x500.webp">
+    <img src="asset/immagini/map-bg-1920x500.jpg"
+         alt="Mappa Napoli — Osteria del Sud"
+         loading="lazy">
+  </picture>
   <div class="map-overlay-card reveal">
     <span class="map-card-label">Dove Siamo</span>
     <h3 class="map-card-title"><em>Osteria</em> del Sud</h3>
@@ -429,7 +494,7 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left;">
+  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
     <div class="footer-col">
       <div class="f-name">Osteria del Sud</div>
       <div class="f-sub" style="margin-bottom: 1.5rem;">Cucina Napoletana · Napoli</div>

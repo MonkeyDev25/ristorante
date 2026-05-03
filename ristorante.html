@@ -17,6 +17,9 @@
 <nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">Osteria del Sud</a>
   <div class="nav-coords"></div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="ristorante.html" style="color:var(--ivory)">Il Ristorante</a></li>
     <li><a href="menu.html">Il Menù</a></li>
@@ -48,9 +51,10 @@
 
     <div class="storia-img reveal">
       <picture>
-        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.webp" type="image/webp">
-        <source media="(max-width: 799px)" srcset="asset/immagini/filosofia-800x1000-sm-mobile.jpg">
-        <img decoding="async" src="asset/immagini/filosofia-1200x1500-lg-desktop.jpg" alt="Interno Osteria del Sud" loading="lazy">
+        <source media="(max-width: 799px)" srcset="asset/immagini/la-nostra-storia-800x1000.webp" type="image/webp">
+        <source media="(max-width: 799px)" srcset="asset/immagini/la-nostra-storia-800x1000.jpg">
+        <source media="(min-width: 800px)" srcset="asset/immagini/la-nostra-storia-1200x1500.webp" type="image/webp">
+        <img decoding="async" src="asset/immagini/la-nostra-storia-1200x1500.jpg" alt="Interno Osteria del Sud" loading="lazy">
       </picture>
       <div class="storia-img-caption">Via Giuseppe Orsi · Napoli</div>
     </div>
@@ -162,6 +166,7 @@
       <div class="swiper-slide atm-slide">
         <div class="atm-img">
           <picture>
+            <source type="image/webp" srcset="asset/immagini/sala-interna-600x800.jpg"> <!-- Fallback to JPG since no WebP exists -->
             <img decoding="async" src="asset/immagini/sala-interna-600x800.jpg" alt="Sala principale" loading="lazy">
           </picture>
           <span class="atm-caption">Sala Principale · Sera</span>
@@ -172,7 +177,8 @@
           <picture>
             <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/cucina-600x800.jpg">
-            <img decoding="async" src="asset/immagini/cucina-1200x1600.webp" alt="Cucina" loading="lazy">
+            <source type="image/webp" srcset="asset/immagini/cucina-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/cucina-1200x1600.jpg" alt="Cucina" loading="lazy">
           </picture>
           <span class="atm-caption">Cucina · Preparazione</span>
         </div>
@@ -180,9 +186,10 @@
       <div class="swiper-slide atm-slide">
         <div class="atm-img">
           <picture>
-            <source media="(max-width: 767px)" srcset="asset/immagini/vino%20della%20casa%20600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/vino-della-casa-600x800.jpg">
-            <img decoding="async" src="asset/immagini/vino%20della%20casa%201200x1600.webp" alt="Cantina" loading="lazy">
+            <source type="image/webp" srcset="asset/immagini/vino-della-casa-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/vino-della-casa-1200x1600.jpg" alt="Cantina" loading="lazy">
           </picture>
           <span class="atm-caption">Cantina · Selezione Vini</span>
         </div>
@@ -192,7 +199,8 @@
           <picture>
             <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/convivio-600x800.jpg">
-            <img decoding="async" src="asset/immagini/convivio-1200x1600.webp" alt="Convivio" loading="lazy">
+            <source type="image/webp" srcset="asset/immagini/convivio-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/convivio-1200x1600.jpg" alt="Convivio" loading="lazy">
           </picture>
           <span class="atm-caption">Tavolo · Convivio</span>
         </div>
@@ -200,9 +208,10 @@
       <div class="swiper-slide atm-slide">
         <div class="atm-img">
           <picture>
-            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo%20imbandito-600x800.webp" type="image/webp">
+            <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.webp" type="image/webp">
             <source media="(max-width: 767px)" srcset="asset/immagini/tavolo-imbandito-600x800.jpg">
-            <img decoding="async" src="asset/immagini/tavolo%20imbandito-1200x1600.webp" alt="Vicoli" loading="lazy">
+            <source type="image/webp" srcset="asset/immagini/tavolo-imbandito-1200x1600.webp">
+            <img decoding="async" src="asset/immagini/tavolo-imbandito-1200x1600.jpg" alt="Vicoli" loading="lazy">
           </picture>
           <span class="atm-caption">Vicoli · Esterno</span>
         </div>
@@ -241,7 +250,7 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left;">
+  <div class="footer-inner" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
     <div class="footer-col">
       <div class="f-name">Osteria del Sud</div>
       <div class="f-sub" style="margin-bottom: 1.5rem;">Cucina Napoletana · Napoli</div>
