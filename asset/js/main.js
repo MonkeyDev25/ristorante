@@ -10,11 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
    ══════════════════════ */
 
 // Hero & Page Hero entrance
-gsap.from('#heroContent > *, .page-hero-content > *', {
-  opacity: 0, y: 30,
-  stagger: .14, duration: 1.3,
-  ease: 'power3.out', delay: .2
-});
+gsap.fromTo('#heroContent > *, .page-hero-content > *',
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, stagger: .14, duration: 1.3, ease: 'power3.out', delay: .2 }
+);
 
 // Scroll reveals
 gsap.utils.toArray('.reveal').forEach(el => {

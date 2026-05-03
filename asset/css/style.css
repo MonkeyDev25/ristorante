@@ -214,6 +214,11 @@ body::after {
   padding: 0 clamp(1.5rem, 6vw, 6rem);
   max-width: 860px;
 }
+/* Pre-nasconde i figli della hero per evitare il flash prima che GSAP carichi */
+#heroContent > *, .page-hero-content > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
 .hero-script {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
