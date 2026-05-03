@@ -568,7 +568,24 @@
 
         <div class="bm-field">
           <label for="bPhone">Numero di Telefono</label>
-          <input type="tel" id="bPhone" class="bm-input" placeholder="+39 333 000 0000" required>
+          <div class="bm-phone-wrap">
+            <select id="bPrefix" class="bm-select bm-prefix" aria-label="Prefisso internazionale">
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+41">🇨🇭 +41</option>
+              <option value="+43">🇦🇹 +43</option>
+              <option value="+32">🇧🇪 +32</option>
+            </select>
+            <input type="tel" id="bPhone" class="bm-input" placeholder="333 000 0000"
+                   pattern="[0-9][0-9\s\-]{5,14}"
+                   title="Inserisci solo cifre (min. 6 numeri)"
+                   required>
+          </div>
         </div>
 
         <div class="bm-row">

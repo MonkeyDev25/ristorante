@@ -1574,6 +1574,10 @@ img.mi-img {
 /* Darker color for options inside select */
 .bm-select option { background: var(--mid); color: var(--ivory); }
 
+.bm-phone-wrap { display: flex; }
+.bm-prefix { min-width: 100px; flex-shrink: 0; border-right: none; }
+.bm-phone-wrap .bm-input { flex: 1; min-width: 0; }
+
 .bm-radio-group { display: flex; flex-direction: column; gap: .8rem; }
 .bm-radio {
   display: flex; align-items: center; gap: .8rem;
