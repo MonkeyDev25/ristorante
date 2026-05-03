@@ -81,12 +81,22 @@ body::after {
   z-index: 500;
   padding: 1.6rem clamp(2rem, 6vw, 5rem);
   display: flex; align-items: center; justify-content: space-between;
-  transition: background .5s, backdrop-filter .5s;
+  transition: background .5s;
 }
 .nav.scrolled {
   background: rgba(17,13,6,.94);
-  backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(193,68,14,.1);
+}
+/* Il blur viene applicato su ::before per evitare che backdrop-filter
+   sul .nav crei un containing block per .nav-links { position: fixed },
+   che causerebbe il menu mobile a non coprire l'intero viewport. */
+.nav.scrolled::before {
+  content: '';
+  position: absolute; inset: 0;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: -1;
+  pointer-events: none;
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
