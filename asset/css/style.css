@@ -791,13 +791,13 @@ footer {
 .f-sub {
   font-family: 'Space Mono', monospace; font-size: .48rem;
   letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(245,237,214,.18);
+  color: rgba(245,237,214,.5);
   margin-bottom: 1.5rem;
 }
 .footer-col-title {
   font-family: 'Space Mono', monospace;
   font-size: .55rem; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--tc); margin-bottom: 1.2rem;
+  color: rgba(245,237,214,.65); margin-bottom: 1.2rem;
 }
 .footer-col ul { list-style: none; }
 .footer-col ul li { margin-bottom: .6rem; }
@@ -829,7 +829,7 @@ footer {
   padding-top: 2rem;
   text-align: center;
   font-size: .75rem;
-  color: rgba(245,237,214,.3);
+  color: rgba(245,237,214,.5);
 }
 
 /* ══════════════════════
