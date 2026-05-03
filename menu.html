@@ -7,6 +7,7 @@
   <meta name="description" content="Il menù dell'Osteria del Sud: primi piatti, secondi, dolci e vini della tradizione campana. Il menù cambia con la stagione.">
 
   <!-- Fonts (non-render-blocking) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -16,7 +17,342 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
-  <link rel="stylesheet" href="asset/css/style.css">
+  <style>
+/* ══════════════════════════════════════════════
+   OSTERIA DEL SUD — style.css
+   Mobile-first. Bootstrap 5 override.
+   Palette: --tc / --ivory / --olive / --wood / --smoke / --glow / --mid
+   Fonts: Cormorant Garamond · Nunito Sans · Space Mono
+   ══════════════════════════════════════════════ */
+
+/* ── TOKENS ── */
+:root {
+  --tc:    #C1440E;
+  --ivory: #F5EDD6;
+  --olive: #3B4A35;
+  --wood:  #4A2E1A;
+  --smoke: #110D06;
+  --glow:  rgba(193,68,14,.3);
+  --mid:   #1c1208;
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--smoke);
+  color: var(--ivory);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── GRAIN OVERLAY ── */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9000;
+  mix-blend-mode: overlay;
+  opacity: .5;
+}
+
+/* ── IMG PLACEHOLDER ── */
+.ph {
+  background:
+    repeating-linear-gradient(45deg, rgba(74,46,26,.14) 0, rgba(74,46,26,.14) 1px, transparent 1px, transparent 22px),
+    linear-gradient(155deg, #2a1a0d 0%, #1a0e05 55%, #0d0802 100%);
+  border: 1px solid rgba(193,68,14,.1);
+  position: relative;
+  overflow: hidden;
+}
+.ph::after {
+  content: attr(data-label);
+  position: absolute; bottom: 1rem; left: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: .44rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(245,237,214,.15);
+  line-height: 1.8;
+  white-space: pre;
+}
+
+/* ── GLOW LINES ── */
+.glow-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--tc) 20%, var(--tc) 80%, transparent 100%);
+  box-shadow: 0 0 16px var(--glow);
+}
+.glow-sep {
+  width: 40px; height: 1px;
+  background: var(--tc);
+  box-shadow: 0 0 10px var(--glow);
+  margin: 1.8rem auto;
+}
+
+/* ══════════════════════
+   NAV
+   ══════════════════════ */
+.nav {
+  position: fixed; inset: 0 0 auto 0;
+  z-index: 500;
+  padding: 1.6rem clamp(2rem, 6vw, 5rem);
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background .5s, backdrop-filter .5s;
+}
+.nav.scrolled {
+  background: rgba(17,13,6,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(193,68,14,.1);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; font-weight: 400; letter-spacing: .07em;
+  color: var(--ivory); text-decoration: none;
+}
+.nav-coords {
+  font-family: 'Space Mono', monospace;
+  font-size: .5rem; letter-spacing: .18em;
+  color: rgba(245,237,214,.25); text-align: center; line-height: 1.9;
+  display: none; /* hidden on mobile */
+}
+
+@media (min-width: 768px) {
+  .nav-coords { display: block; }
+}
+
+/* Nav toggle (Hamburger) */
+.nav-toggle {
+  display: flex; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+  z-index: 1000; padding: .5rem;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--ivory); transition: all .4s cubic-bezier(.4,0,.2,1);
+}
+
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+}
+
+/* Nav Links responsiveness */
+.nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a {
+  font-family: 'Space Mono', monospace;
+  font-size: .56rem; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(245,237,214,.6); text-decoration: none; transition: color .2s;
+}
+.nav-links a:hover { color: var(--tc); }
+
+.nav-cta {
+  font-family: 'Space Mono', monospace;
+  font-size: .56rem; letter-spacing: .22em; text-transform: uppercase;
+  border: 1px solid rgba(193,68,14,.55) !important;
+  padding: .55rem 1.3rem;
+  color: var(--ivory) !important;
+  background: transparent;
+  cursor: pointer;
+  transition: all .25s !important;
+}
+.nav-cta:hover { background: var(--tc) !important; border-color: var(--tc) !important; }
+
+@media (max-width: 767px) {
+  .nav-links {
+    position: fixed; inset: 0;
+    background: rgba(17,13,6,.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column; justify-content: center;
+    transform: translateX(100%); transition: transform .5s cubic-bezier(.4,0,.2,1);
+    z-index: 900; gap: 3rem;
+    text-align: center;
+  }
+  .nav.is-open .nav-links { transform: translateX(0); }
+  
+  /* Hamburger Animation */
+  .nav.is-open .nav-toggle span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav.is-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.is-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+  
+  .nav-links a { 
+    font-size: 1.2rem !important; 
+    color: var(--ivory) !important; /* Higher contrast on mobile */
+    opacity: .8;
+  }
+  .nav-links .nav-cta { 
+    font-size: 1.2rem !important; 
+    padding: 1rem 3rem !important;
+    border-color: var(--tc) !important;
+    color: var(--ivory) !important;
+  }
+}
+
+/* ══════════════════════
+   HERO
+   ══════════════════════ */
+.hero {
+  height: 100svh; min-height: 640px;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero-ph {
+  position: absolute; inset: -30% 0;
+  background:
+    radial-gradient(ellipse 70% 90% at 60% 45%, rgba(90,50,20,.6) 0%, transparent 65%),
+    repeating-linear-gradient(160deg, rgba(74,46,26,.07) 0, rgba(74,46,26,.07) 1px, transparent 1px, transparent 55px),
+    linear-gradient(170deg, #3a2010 0%, #1e1005 45%, #0d0802 100%);
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17,13,6,.78) 0%, rgba(17,13,6,.55) 40%, rgba(17,13,6,.88) 100%);
+}
+.hero-ph-label {
+  position: absolute; bottom: 1.8rem; right: 2rem;
+  font-family: 'Space Mono', monospace; font-size: .44rem;
+  letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(245,237,214,.12);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+  max-width: 860px;
+}
+.hero-script {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic; font-weight: 300;
+  color: rgba(245,237,214,.8);
+  display: block; margin-bottom: .8rem;
+  letter-spacing: .04em;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4.5rem, 11vw, 10rem);
+  font-weight: 300; font-style: italic;
+  color: var(--ivory); line-height: .92;
+  margin-bottom: 2rem;
+  text-wrap: balance;
+}
+.hero-title em { color: var(--tc); font-style: italic; }
+.hero-claim {
+  font-size: clamp(.82rem, 1.1vw, .95rem); font-weight: 300;
+  color: rgba(245,237,214,.75);
+  max-width: 400px; margin: 0 auto 3rem;
+  line-height: 2; text-wrap: pretty;
+}
+
+/* Buttons */
+.btn-tc {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: .56rem; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--ivory);
+  border: 1px solid var(--tc);
+  padding: 1rem 2.4rem; text-decoration: none;
+  position: relative; overflow: hidden; transition: color .3s;
+  background: transparent; cursor: pointer;
+}
+.btn-tc::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--tc);
+  transform: translateX(-105%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1); z-index: 0;
+}
+.btn-tc:hover::before { transform: translateX(0); }
+.btn-tc span { position: relative; z-index: 1; }
+
+.btn-outline {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: .54rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ivory);
+  border: 1px solid rgba(245,237,214,.25);
+  padding: .85rem 2rem; text-decoration: none;
+  transition: all .3s;
+}
+.btn-outline:hover { border-color: var(--tc); color: var(--tc); }
+
+.btn-dark {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: .54rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--smoke); border: 1px solid rgba(17,13,6,.4);
+  padding: .85rem 2rem; text-decoration: none; transition: all .3s;
+}
+.btn-dark:hover { background: var(--smoke); color: var(--ivory); }
+
+/* Scroll cue */
+.scroll-cue {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Mono', monospace; font-size: .44rem;
+  letter-spacing: .28em; color: rgba(245,237,214,.18);
+  display: flex; flex-direction: column; align-items: center; gap: .6rem;
+  z-index: 2;
+}
+.scroll-cue::after {
+  content: ''; width: 1px; height: 48px;
+  background: linear-gradient(to bottom, rgba(193,68,14,.5), transparent);
+}
+
+/* ── PAGE HERO ── */
+    .page-hero {
+      height: 65svh; min-height: 450px;
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: -20% 0;
+      background:
+        radial-gradient(ellipse 80% 100% at 30% 60%, rgba(90,50,20,.5) 0%, transparent 70%),
+        repeating-linear-gradient(160deg, rgba(74,46,26,.06) 0, rgba(74,46,26,.06) 1px, transparent 1px, transparent 55px),
+        linear-gradient(170deg, #2a1808 0%, #1e1005 45%, #0d0802 100%);
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(17,13,6,1) 0%, rgba(17,13,6,.3) 60%, rgba(17,13,6,.65) 100%);
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: clamp(4rem, 6vw, 6rem) clamp(1.5rem, 6vw, 5rem) 0;
+      width: 100%;
+    }
+    .page-breadcrumb {
+      font-family: 'Space Mono', monospace;
+      font-size: .5rem; letter-spacing: .28em; text-transform: uppercase;
+      color: rgba(245,237,214,.7);
+      margin-bottom: 1rem;
+      display: flex; align-items: center; justify-content: center; gap: .75rem;
+    }
+    .page-breadcrumb a { color: inherit; text-decoration: none; transition: color .2s; }
+    .page-breadcrumb a:hover { color: var(--tc); }
+    .page-breadcrumb span { color: var(--tc); }
+    .page-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 9vw, 7rem);
+      font-weight: 300; font-style: italic;
+      color: var(--ivory); line-height: .95;
+      padding-bottom: 0.2em; margin-bottom: -0.2em;
+    }
+    .page-title em { color: var(--tc); }
+    .page-hero-note {
+      font-size: .82rem; font-weight: 300;
+      color: rgba(245,237,214,.75); font-style: italic;
+      margin-top: 2rem; display: block;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+</style>
+  <link rel="preload" href="asset/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="asset/css/style.css"></noscript>
 </head>
 <body>
 
