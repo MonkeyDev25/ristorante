@@ -19,6 +19,7 @@
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+html:has(dialog[open]) { scroll-behavior: auto; }
 
 body {
   background: var(--smoke);
@@ -1507,13 +1508,18 @@ img.mi-img {
    BOOKING MODAL
    ══════════════════════ */
 .booking-modal {
-  margin: auto; /* Centers the dialog */
+  margin: 0 auto; /* Center horizontally only */
+  top: 5vh;       /* Pin to top */
+  bottom: auto;   /* Remove bottom constraint */
   padding: 0;
   border: none;
   background: transparent;
   color: var(--ivory);
   max-width: 600px;
   width: 90%;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
 }
 .booking-modal::backdrop {
   background: rgba(17,13,6,.85);
@@ -1524,6 +1530,12 @@ img.mi-img {
   border: 1px solid rgba(245,237,214,.1);
   padding: clamp(2rem, 5vw, 3.5rem);
   position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  max-height: 80vh; /* Use vh to prevent recalculation on mobile */
+  isolation: isolate;
+  transform: translateZ(0);
 }
 .bm-close {
   position: absolute; top: 1.5rem; right: 1.5rem;
@@ -1556,7 +1568,7 @@ img.mi-img {
   color: var(--ivory);
   padding: .8rem 1rem;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: .9rem; outline: none; transition: border-color .3s;
+  font-size: 16px; outline: none; transition: border-color .3s;
 }
 .bm-input:focus, .bm-select:focus, .bm-textarea:focus { border-color: var(--tc); }
 

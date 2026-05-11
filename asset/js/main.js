@@ -4,6 +4,7 @@
    ══════════════════════════════════════════════ */
 
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 /* ══════════════════════
    GSAP — ANIMAZIONI
@@ -277,13 +278,8 @@ if (document.querySelector('.atm-swiper')) {
 const bookingModal = document.getElementById('bookingModal');
 if (bookingModal) {
   bookingModal.addEventListener('click', (e) => {
-    const dialogDimensions = bookingModal.getBoundingClientRect();
-    if (
-      e.clientX < dialogDimensions.left ||
-      e.clientX > dialogDimensions.right ||
-      e.clientY < dialogDimensions.top ||
-      e.clientY > dialogDimensions.bottom
-    ) {
+    // Se il click è esattamente sul tag <dialog> (che corrisponde al ::backdrop perché il contenuto è in .bm-inner)
+    if (e.target === bookingModal) {
       bookingModal.close();
       document.getElementById('bmFormContainer').style.display = 'block';
       document.getElementById('bmSuccess').style.display = 'none';
